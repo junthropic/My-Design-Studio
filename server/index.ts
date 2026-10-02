@@ -271,6 +271,7 @@ export async function createServer(options: ServerOptions = {}) {
   }
   function settings() {
     return {
+      appTheme: store.setting('appTheme', 'dark'),
       aiModels: store.setting('aiModels', modelsDefault),
       higgsfield: {
         modelEndpoint: '',
@@ -317,6 +318,22 @@ export async function createServer(options: ServerOptions = {}) {
     res.status(201).json(store.create(validateProject(body.project ?? createProject(body.name))));
   });
   app.get('/api/projects/:id', (req, res) => res.json(store.project(String(req.params.id))));
+  app.post('/api/projects/:id/duplicate', (req, res) => {
+    const body = z
+      .object({
+        name: z.string().trim().min(1).max(200),
+        baseRevision: z.number().int().positive(),
+      })
+      .strict()
+      .parse(req.body);
+    const source = store.project(String(req.params.id));
+    if (source.revision !== body.baseRevision)
+      throw new ApiError(409, '다른 창에서 변경되었습니다. 최신 프로젝트를 다시 불러오세요.');
+    // Content-addressed assets are immutable and shared; document IDs are scoped to each project.
+    res
+      .status(201)
+      .json(store.create(validateProject({ ...source, id: randomUUID(), name: body.name })));
+  });
   app.put('/api/projects/:id', (req, res) => {
     const body = z
       .object({ project: z.unknown(), baseRevision: z.number().int().nonnegative() })
@@ -327,8 +344,22 @@ export async function createServer(options: ServerOptions = {}) {
     res.json(store.save(project, body.baseRevision));
   });
   app.delete('/api/projects/:id', (req, res) => {
-    store.delete(String(req.params.id));
-    res.json({ ok: true });
+    const id = String(req.params.id);
+    const body = z.object({ baseRevision: z.number().int().positive() }).strict().parse(req.body);
+    if (
+      store.jobs().some((j) => j.projectId === id && ['queued', 'running'].includes(j.status)) ||
+      higgs
+        .list(id)
+        .some((j) => !['completed', 'failed', 'nsfw', 'canceled', 'cancelled'].includes(j.status))
+    )
+      throw new ApiError(
+        409,
+        '진행 중인 내보내기 또는 생성 작업이 있습니다. 작업 종료 후 삭제하세요.',
+      );
+    store.delete(id, body.baseRevision);
+    // Keep the workspace usable after deleting its final project.
+    const next = store.projects()[0] ?? store.create(createProject('새 디자인 프로젝트'));
+    res.json({ ok: true, nextProject: next });
   });
   app.get('/api/projects/:id/revisions', (req, res) =>
     res.json(store.revisions(String(req.params.id))),
@@ -561,6 +592,7 @@ export async function createServer(options: ServerOptions = {}) {
   app.put('/api/settings', (req, res) => {
     const body = z
       .object({
+        appTheme: z.enum(['light', 'dark']).optional(),
         aiModels: z
           .object({
             openai: z.string().min(1).max(100),
@@ -583,6 +615,7 @@ export async function createServer(options: ServerOptions = {}) {
       })
       .strict()
       .parse(req.body);
+    if (body.appTheme) store.setSetting('appTheme', body.appTheme);
     if (body.aiModels)
       store.setSetting('aiModels', {
         ...store.setting('aiModels', modelsDefault),

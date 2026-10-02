@@ -1,9 +1,9 @@
 .motion-editor {
-  --m-line: var(--color-border, #293449);
-  --m-muted: var(--color-muted, #99a9bf);
-  --m-panel: var(--color-surface, #111b2d);
+  --m-line: var(--color-border, var(--ui-line, #293449));
+  --m-muted: var(--color-muted, var(--ui-text, #99a9bf));
+  --m-panel: var(--color-surface, var(--ui-surface, #111b2d));
   font-size: 13px;
-  color: var(--color-text, #e4edf9);
+  color: var(--color-text, var(--ui-text, #e4edf9));
   min-width: 0;
 }
 .motion-editor * {
@@ -61,7 +61,7 @@
   transition: background 0.15s;
 }
 .motion-editor button:hover {
-  background: #263854;
+  background: var(--ui-selected, #263854);
 }
 .motion-editor button:disabled {
   opacity: 0.4;
@@ -71,11 +71,11 @@
 .motion-editor input:focus-visible,
 .motion-editor select:focus-visible,
 .motion-editor textarea:focus-visible {
-  outline: 2px solid #7ea8ff;
+  outline: 2px solid var(--ui-focus, #7ea8ff);
   outline-offset: 2px;
 }
 .motion-editor button.danger {
-  color: #ff8d9d;
+  color: var(--ui-danger, #ff8d9d);
 }
 .motion-editor label {
   display: grid;
@@ -88,7 +88,7 @@
 .motion-editor select,
 .motion-editor textarea {
   width: 100%;
-  color: var(--color-text, #e4edf9);
+  color: var(--color-text, var(--ui-text, #e4edf9));
 }
 .motion-editor .motion-checkbox {
   display: flex;
@@ -100,7 +100,7 @@
   width: auto;
 }
 .motion-editor input[type='range'] {
-  accent-color: #7ea8ff;
+  accent-color: var(--ui-focus, #7ea8ff);
   padding: 0;
 }
 .motion-editor textarea {
@@ -130,7 +130,7 @@
   gap: 7px;
 }
 .motion-template-add button {
-  background: #284b80;
+  background: var(--ui-surface, #284b80);
 }
 .motion-scene-list {
   display: grid;
@@ -145,12 +145,12 @@
   min-height: 66px;
 }
 .motion-scene-list button.active {
-  border-color: #7ea8ff;
-  background: #233b5d;
+  border-color: var(--ui-focus, #7ea8ff);
+  background: var(--ui-selected, #233b5d);
 }
 .motion-scene-number {
   font-size: 20px;
-  color: #7ea8ff;
+  color: var(--ui-text, #7ea8ff);
   font-variant-numeric: tabular-nums;
 }
 .motion-small-actions button {
@@ -220,11 +220,11 @@
   justify-content: center;
   padding: 30px;
   text-align: center;
-  background: #0b1221;
+  background: var(--ui-surface, #0b1221);
 }
 .motion-render-error {
-  color: #ff8d9d;
-  background: #181021;
+  color: var(--ui-danger, #ff8d9d);
+  background: var(--ui-surface, #181021);
   height: 100%;
   padding: 20px;
 }
@@ -238,7 +238,7 @@
 }
 .motion-player-tools output {
   font-variant-numeric: tabular-nums;
-  color: #acbfd8;
+  color: var(--ui-text, #acbfd8);
 }
 .motion-player-tools > span {
   margin-left: auto;
@@ -276,8 +276,8 @@
   min-width: 24px;
 }
 .motion-timeline-scenes button.active {
-  background: #304b75;
-  border-color: #7ea8ff;
+  background: var(--ui-selected, #304b75);
+  border-color: var(--ui-focus, #7ea8ff);
 }
 .motion-timeline-head {
   display: flex;
@@ -304,12 +304,12 @@
   padding: 5px;
 }
 .motion-track.active > button {
-  color: #9bbcff;
+  color: var(--ui-text, #9bbcff);
 }
 .motion-track-body {
   height: 22px;
   position: relative;
-  background: #080e1b;
+  background: var(--ui-surface, #080e1b);
   border-radius: 4px;
   cursor: crosshair;
 }
@@ -317,11 +317,11 @@
   position: absolute;
   top: 4px;
   bottom: 4px;
-  background: #3e5a85;
+  background: var(--ui-selected, #3e5a85);
   border-radius: 3px;
 }
 .motion-track.active .motion-track-clip {
-  background: #658bcb;
+  background: var(--ui-selected, #658bcb);
 }
 .motion-editor .motion-key-dot {
   position: absolute;
@@ -329,7 +329,7 @@
   transform: translateX(-50%);
   background: transparent;
   border: 0;
-  color: #ffc66b;
+  color: var(--ui-text, #ffc66b);
   font-size: 13px;
   padding: 0;
   z-index: 2;
@@ -339,7 +339,7 @@
   top: 0;
   bottom: 0;
   width: 1px;
-  background: #e7f0ff;
+  background: var(--ui-surface, #e7f0ff);
   pointer-events: none;
 }
 .motion-audio {
@@ -418,10 +418,10 @@
   bottom: 28px;
   right: 28px;
   max-width: 440px;
-  border: 1px solid #547dbb;
+  border: 1px solid var(--ui-line, #547dbb);
   border-radius: 10px;
   padding: 16px;
-  background: #142740;
+  background: var(--ui-surface, #142740);
   z-index: 100;
   box-shadow: 0 8px 30px #0006;
 }
@@ -520,8 +520,8 @@
   padding: 6px 9px;
 }
 .motion-effect-categories button[aria-pressed='true'] {
-  border-color: #7ea8ff;
-  background: #233b5d;
+  border-color: var(--ui-focus, #7ea8ff);
+  background: var(--ui-selected, #233b5d);
 }
 .motion-effect-toolbar > input[type='range'] {
   width: 120px;
@@ -551,7 +551,7 @@
   gap: 5px;
 }
 .motion-effect-card.active {
-  border-color: #7ea8ff !important;
+  border-color: var(--ui-focus, #7ea8ff) !important;
   box-shadow: inset 0 0 0 1px #7ea8ff;
 }
 .motion-effect-card:disabled {

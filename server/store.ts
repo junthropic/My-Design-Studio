@@ -124,10 +124,19 @@ export class StudioStore {
     if (!p) throw new ApiError(404, '저장된 버전이 없습니다.');
     return this.save(p, baseRevision);
   }
-  delete(id: string) {
-    this.project(id);
-    this.db.run('DELETE FROM projects WHERE id=?', [id]);
-    this.db.run('DELETE FROM revisions WHERE project_id=?', [id]);
+  delete(id: string, baseRevision: number) {
+    if (this.project(id).revision !== baseRevision)
+      throw new ApiError(409, '다른 창에서 변경되었습니다. 최신 프로젝트를 다시 불러오세요.');
+    this.db.run('BEGIN');
+    try {
+      this.db.run('DELETE FROM projects WHERE id=?', [id]);
+      this.db.run('DELETE FROM revisions WHERE project_id=?', [id]);
+      this.db.run('COMMIT');
+    } catch (error) {
+      this.db.run('ROLLBACK');
+      throw error;
+    }
+    // Shared asset files and completed output files remain available to copies and history.
     this.flush();
   }
   jobs() {

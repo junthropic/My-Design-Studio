@@ -80,6 +80,8 @@ export async function buildLocalRelease({
   };
   try {
     await step('typecheck', ['node_modules/typescript/bin/tsc', '--noEmit']);
+    // All browser integration tests must consume this source revision, including a fresh clone.
+    await step('ui', ['node_modules/vite/bin/vite.js', 'build', '--configLoader', 'runner']);
     const testsPath = path.join(buildDirectory, 'tests.json');
     await step('tests', [
       'node_modules/vitest/vitest.mjs',
@@ -98,7 +100,6 @@ export async function buildLocalRelease({
       ),
     );
     // Equivalent compilation stages to the existing build, without a visible shell or modifying it.
-    await step('ui', ['node_modules/vite/bin/vite.js', 'build', '--configLoader', 'runner']);
     await step('motion', ['node_modules/tsx/dist/cli.mjs', 'src/motion/build.ts', '--browser']);
     await step('server', [
       'node_modules/tsup/dist/cli-default.js',

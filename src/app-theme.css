@@ -1,0 +1,140 @@
+/* App chrome only. Project previews and export palettes keep their own tokens. */
+:root {
+  color-scheme: dark;
+}
+:root[data-app-theme='light'] {
+  color-scheme: light;
+  --ui-canvas: #f3f5fa;
+  --ui-surface: #ffffff;
+  --ui-selected: #e7edfa;
+  --ui-text: #30405b;
+  --ui-line: #bdc8db;
+  --ui-focus: #4265b1;
+  --ui-danger: #a62242;
+  --ui-success: #166647;
+  --accent: #3455a1;
+  --muted: #53627a;
+  --border: #c8d1e0;
+  --panel: #ffffff;
+  --sidebar: #f9faff;
+}
+.theme-control {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.theme-control > span {
+  color: var(--muted);
+  font-size: 10px;
+  white-space: nowrap;
+}
+.topbar-actions {
+  flex-wrap: wrap;
+}
+.topbar {
+  height: auto;
+  min-height: 68px;
+  gap: 12px;
+}
+.workspace-switch > button > span:nth-child(2) {
+  min-width: 0;
+  flex: 1;
+}
+.workspace-switch strong {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.project-menu {
+  width: min(365px, calc(100vw - 36px));
+  max-height: 65vh;
+  overflow-y: auto;
+}
+.project-menu-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.project-menu .project-menu-select {
+  flex: 1;
+  min-width: 0;
+}
+.project-menu-select > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.project-menu-tools {
+  display: flex;
+}
+.project-menu-tools button {
+  width: 30px;
+  height: 34px;
+  padding: 7px;
+}
+.project-menu-tools svg {
+  margin: 0;
+  color: currentColor;
+}
+.project-menu-tools button:last-child:hover {
+  color: var(--ui-danger, #ffadb9);
+}
+.project-dialog {
+  color: inherit;
+  margin: auto;
+}
+.project-dialog::backdrop {
+  background: #06091199;
+  backdrop-filter: blur(5px);
+}
+.project-dialog p {
+  overflow-wrap: anywhere;
+}
+.project-dialog .button-row {
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+.button.danger {
+  color: #fff;
+  background: #a62242;
+  border-color: #a62242;
+}
+.button.danger:hover {
+  background: #861a34;
+}
+:root[data-app-theme='light'] .home-current,
+:root[data-app-theme='light'] .hero-banner {
+  background: linear-gradient(130deg, #edf2ff, #ffffff);
+}
+:root[data-app-theme='light'] .motion-playhead {
+  background: #365da9;
+}
+:root[data-app-theme='light'] .status-dot {
+  background: #237e5d;
+}
+:root[data-app-theme='light'] .unsaved-dot {
+  background: #936015;
+}
+:root[data-app-theme='light'] .nav-active-dot {
+  background: #4265b1;
+}
+:root[data-app-theme='light'] .motion-key-dot {
+  color: #8b4b00;
+}
+:root[data-app-theme='light'] .motion-track-clip {
+  background: #b7c9ef;
+}
+:root[data-app-theme='light'] .motion-track.active .motion-track-clip {
+  background: #8daae1;
+}
+@media (max-width: 1100px) {
+  .topbar {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-block: 12px;
+  }
+  .topbar-actions {
+    gap: 7px;
+  }
+}

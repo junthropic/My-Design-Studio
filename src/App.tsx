@@ -38,6 +38,8 @@ import { AssetsPanel } from './components/AssetsPanel';
 import { ExportPanel } from './components/ExportPanel';
 import { Connections } from './components/Connections';
 import { AIPanel } from './components/AIPanel';
+import { ProjectMenu, type ProjectAction } from './components/ProjectMenu';
+import { useAppTheme } from './useAppTheme';
 const MotionEditor = lazy(() => import('./motion/MotionEditor'));
 const NAV = [
   { id: 'home', name: '홈', icon: Home },
@@ -56,14 +58,15 @@ export default function App() {
   const [page, setPage] = useState('home'),
     [ai, setAI] = useState(false),
     [projects, setProjects] = useState<Project[]>([]),
-    [projectMenu, setProjectMenu] = useState(false),
     [jobs, setJobs] = useState<Job[]>([]),
     [toast, setToast] = useState<{ message: string; error: boolean } | null>(null),
     [bootError, setBootError] = useState(''),
     [history, setHistory] = useState<any[] | null>(null),
     [newModal, setNewModal] = useState(false),
+    [creating, setCreating] = useState(false),
     [newName, setNewName] = useState('새 디자인 프로젝트');
   const importInput = useRef<HTMLInputElement>(null),
+    createPending = useRef(false),
     savePromise = useRef<Promise<void> | null>(null),
     toastTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const notify = useCallback((message: string, error = false) => {
@@ -74,6 +77,15 @@ export default function App() {
   const onError = useCallback(
     (e: unknown) => notify(e instanceof Error ? e.message : String(e), true),
     [notify],
+  );
+  const appTheme = useAppTheme(onError);
+  const acceptSavedProject = useCallback(
+    (saved: Project) => {
+      // An async import/AI response for a previous project must not switch the workspace back.
+      if (useStudio.getState().project?.id === saved.id) setProject(saved);
+      setProjects((list) => list.map((p) => (p.id === saved.id ? saved : p)));
+    },
+    [setProject],
   );
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
@@ -125,7 +137,8 @@ export default function App() {
       }
     })();
     savePromise.current = promise;
-    return promise;
+    await promise;
+    if (useStudio.getState().dirty) return flush();
   }, []);
   useEffect(() => {
     if (!dirty) return;
@@ -167,7 +180,6 @@ export default function App() {
       }
       if (e.key === 'Escape') {
         setAI(false);
-        setProjectMenu(false);
         setHistory(null);
         setNewModal(false);
       }
@@ -186,28 +198,69 @@ export default function App() {
     };
   }, [flush, notify, onError, undo, redo]);
   async function switchProject(p: Project) {
-    try {
-      await flush();
-      setProject(await api('/projects/' + p.id));
-      setProjectMenu(false);
-    } catch (e) {
-      onError(e);
+    await flush();
+    setProject(await api('/projects/' + p.id));
+    setHistory(null);
+    setJobs([]);
+  }
+  async function manageProject(action: ProjectAction, selected: Project, name: string) {
+    await flush();
+    const current = await api<Project>('/projects/' + selected.id);
+    if (action === 'delete') {
+      const result = await api<{ nextProject: Project }>('/projects/' + selected.id, {
+        method: 'DELETE',
+        body: JSON.stringify({ baseRevision: current.revision }),
+      });
+      if (useStudio.getState().project?.id === selected.id) {
+        setProject(result.nextProject);
+        setJobs([]);
+        setPage('home');
+      }
+    } else if (action === 'duplicate') {
+      const copy = await api<Project>(`/projects/${selected.id}/duplicate`, {
+        method: 'POST',
+        body: JSON.stringify({ name, baseRevision: current.revision }),
+      });
+      setProject(copy);
+      setJobs([]);
+      setPage('home');
+    } else {
+      const saved = await api<Project>('/projects/' + selected.id, {
+        method: 'PUT',
+        body: JSON.stringify({ project: { ...current, name }, baseRevision: current.revision }),
+      });
+      if (useStudio.getState().project?.id === saved.id) setProject(saved);
     }
+    setHistory(null);
+    setProjects(await api('/projects'));
+    notify(
+      action === 'delete'
+        ? '프로젝트를 삭제했습니다.'
+        : action === 'duplicate'
+          ? '복제한 프로젝트를 열었습니다.'
+          : '프로젝트 이름을 변경했습니다.',
+    );
   }
   async function createNew() {
+    if (createPending.current || !newName.trim()) return;
+    createPending.current = true;
+    setCreating(true);
     try {
       await flush();
       const p = await api<Project>('/projects', {
         method: 'POST',
-        body: JSON.stringify({ name: newName }),
+        body: JSON.stringify({ name: newName.trim() }),
       });
       setProject(p);
-      setProjects([p, ...projects]);
+      setProjects((list) => [p, ...list]);
       setNewModal(false);
       setPage('gallery');
       notify('새 작업실을 만들었습니다.');
     } catch (e) {
       onError(e);
+    } finally {
+      createPending.current = false;
+      setCreating(false);
     }
   }
   async function onExport(format: string) {
@@ -287,34 +340,14 @@ export default function App() {
             <span>YOUR CREATIVE SPACE</span>
           </div>
         </div>
-        <div className="workspace-switch">
-          <button onClick={() => setProjectMenu(!projectMenu)}>
-            <span className="workspace-avatar">J</span>
-            <span>
-              <strong>{project.name}</strong>
-              <small>개인 작업 공간</small>
-            </span>
-            <ChevronDown size={15} />
-          </button>
-          {projectMenu && (
-            <div className="project-menu">
-              {projects.map((p) => (
-                <button key={p.id} onClick={() => void switchProject(p)}>
-                  <span>{p.name}</span>
-                  {p.id === project.id && <Check size={14} />}
-                </button>
-              ))}
-              <button
-                onClick={() => {
-                  setNewModal(true);
-                  setProjectMenu(false);
-                }}
-              >
-                <Plus size={14} />새 프로젝트
-              </button>
-            </div>
-          )}
-        </div>
+        <ProjectMenu
+          project={project}
+          projects={projects}
+          onSelect={switchProject}
+          onNew={() => setNewModal(true)}
+          onAction={manageProject}
+          onError={onError}
+        />
         <div className="nav-label">WORKSPACE</div>
         <nav>
           {NAV.map((n, i) => (
@@ -403,21 +436,53 @@ export default function App() {
             >
               <Clock size={16} />
             </button>
-            <div className="theme-switch">
-              <button
-                aria-label="라이트 모드"
-                className={project.mode === 'light' ? 'active' : ''}
-                onClick={() => change({ ...project, mode: 'light' })}
-              >
-                <Sun size={14} />
-              </button>
-              <button
-                aria-label="다크 모드"
-                className={project.mode === 'dark' ? 'active' : ''}
-                onClick={() => change({ ...project, mode: 'dark' })}
-              >
-                <Moon size={14} />
-              </button>
+            <div className="theme-control">
+              <span>앱</span>
+              <div className="theme-switch" role="group" aria-label="앱 전체 테마">
+                <button
+                  aria-label="앱 라이트 모드"
+                  title="앱 전체를 라이트 모드로"
+                  aria-pressed={appTheme.theme === 'light'}
+                  className={appTheme.theme === 'light' ? 'active' : ''}
+                  disabled={appTheme.disabled}
+                  onClick={() => void appTheme.changeTheme('light')}
+                >
+                  <Sun size={14} />
+                </button>
+                <button
+                  aria-label="앱 다크 모드"
+                  title="앱 전체를 다크 모드로"
+                  aria-pressed={appTheme.theme === 'dark'}
+                  className={appTheme.theme === 'dark' ? 'active' : ''}
+                  disabled={appTheme.disabled}
+                  onClick={() => void appTheme.changeTheme('dark')}
+                >
+                  <Moon size={14} />
+                </button>
+              </div>
+            </div>
+            <div className="theme-control">
+              <span>작업물</span>
+              <div className="theme-switch" role="group" aria-label="작업물 테마">
+                <button
+                  aria-label="라이트 모드"
+                  title="작업물 라이트 모드"
+                  aria-pressed={project.mode === 'light'}
+                  className={project.mode === 'light' ? 'active' : ''}
+                  onClick={() => change({ ...project, mode: 'light' })}
+                >
+                  <Sun size={14} />
+                </button>
+                <button
+                  aria-label="다크 모드"
+                  title="작업물 다크 모드"
+                  aria-pressed={project.mode === 'dark'}
+                  className={project.mode === 'dark' ? 'active' : ''}
+                  onClick={() => change({ ...project, mode: 'dark' })}
+                >
+                  <Moon size={14} />
+                </button>
+              </div>
             </div>
             <button className="button secondary small" onClick={() => importInput.current?.click()}>
               <Upload size={14} />
@@ -439,13 +504,13 @@ export default function App() {
             e.target.value = '';
           }}
         />
-        <main className={`main-content page-${page}`}>
+        <main key={project.id} className={`main-content page-${page}`}>
           {page === 'home' ? (
             <HomePage
               project={project}
               projects={projects}
               jobs={jobs}
-              onOpenProject={(p) => void switchProject(p)}
+              onOpenProject={(p) => void switchProject(p).catch(onError)}
               onNavigate={setPage}
               onNew={() => setNewModal(true)}
               onExport={(f) => void onExport(f)}
@@ -477,14 +542,14 @@ export default function App() {
             <AssetsPanel
               project={project}
               onChange={change}
-              onSaved={setProject}
+              onSaved={acceptSavedProject}
               beforeAction={flush}
               onError={onError}
             />
           ) : page === 'settings' ? (
             <Connections
               project={project}
-              onSaved={setProject}
+              onSaved={acceptSavedProject}
               beforeAction={flush}
               onError={onError}
             />
@@ -515,9 +580,10 @@ export default function App() {
       )}
       {ai && (
         <AIPanel
+          key={project.id}
           project={project}
           onClose={() => setAI(false)}
-          onSaved={setProject}
+          onSaved={acceptSavedProject}
           beforeAction={flush}
           onError={onError}
         />
@@ -551,17 +617,18 @@ export default function App() {
               프로젝트 이름
               <input
                 autoFocus
+                maxLength={200}
                 value={newName}
                 onChange={(e) => setNewName(e.target.value)}
                 onKeyDown={(e) => {
-                  if (e.key === 'Enter' && newName.trim()) void createNew();
+                  if (e.key === 'Enter' && newName.trim() && !creating) void createNew();
                 }}
               />
             </label>
             <p className="help">스타일 6종, 슬라이드 10장, 웹 3종, 15초 모션 예시로 시작합니다.</p>
             <button
               className="button primary"
-              disabled={!newName.trim()}
+              disabled={!newName.trim() || creating}
               onClick={() => void createNew()}
             >
               <Plus size={15} />

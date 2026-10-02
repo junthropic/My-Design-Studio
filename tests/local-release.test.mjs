@@ -285,7 +285,7 @@ describe('LOCAL separate release', () => {
       const testStep = calls.findIndex((a) => a.includes('--exclude'));
       const uiBuild = calls.findIndex((a) => a.includes('node_modules/vite/bin/vite.js'));
       const uiAcceptance = calls.findIndex((a) => a.some((s) => s.endsWith('ui-tests.json')));
-      expect(testStep).toBeLessThan(uiBuild);
+      expect(uiBuild).toBeLessThan(testStep);
       expect(uiBuild).toBeLessThan(uiAcceptance);
       expect(calls.at(-1)).toContain('--dir');
       expect(calls.flat().join(' ')).not.toMatch(

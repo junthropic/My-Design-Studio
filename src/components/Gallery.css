@@ -18,7 +18,7 @@
 }
 .gallery-results {
   font-size: 10px;
-  color: #8995ad;
+  color: var(--ui-text, #8995ad);
   margin-left: auto;
 }
 .gallery-card-tags {
@@ -29,23 +29,23 @@
 }
 .gallery-card-tags button {
   font-size: 8px;
-  color: #98a9ca;
-  background: #1b2434;
-  border: 1px solid #2e3c55;
+  color: var(--ui-text, #98a9ca);
+  background: var(--ui-surface, #1b2434);
+  border: 1px solid var(--ui-line, #2e3c55);
   border-radius: 4px;
   padding: 3px 6px;
 }
 .gallery-card-tags button:hover {
-  color: #d3dfff;
-  border-color: #6980ad;
+  color: var(--ui-text, #d3dfff);
+  border-color: var(--ui-focus, #6980ad);
 }
 .gallery-card-actions {
   display: flex;
   align-items: center;
   gap: 8px;
   padding: 8px 13px;
-  border-top: 1px solid #2a3449;
-  background: #131a25;
+  border-top: 1px solid var(--ui-line, #2a3449);
+  background: var(--ui-surface, #131a25);
 }
 .gallery-card-actions .text-button {
   display: flex;
@@ -61,14 +61,14 @@
   margin-left: auto;
 }
 .gallery-card-actions .gallery-delete:hover {
-  color: #f0a5b6;
-  background: #472b39;
+  color: var(--ui-danger, #f0a5b6);
+  background: var(--ui-selected, #472b39);
 }
 .gallery-dialog {
   margin: auto;
-  border: 1px solid #46516a;
-  background: #181f2d;
-  color: #e7ebf6;
+  border: 1px solid var(--ui-line, #46516a);
+  background: var(--ui-surface, #181f2d);
+  color: var(--ui-text, #e7ebf6);
   max-height: 88vh;
   overflow: auto;
   box-shadow: 0 24px 80px #0009;
@@ -106,12 +106,12 @@
   align-items: center;
   gap: 10px;
   padding: 12px;
-  border: 1px solid #34425a;
+  border: 1px solid var(--ui-line, #34425a);
   border-radius: 7px;
 }
 .gallery-memberships small {
   margin-left: auto;
-  color: #8293b1;
+  color: var(--ui-text, #8293b1);
   font-size: 9px;
 }
 .gallery-delete-copy {
