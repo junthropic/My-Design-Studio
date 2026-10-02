@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "format": "blender",
+  "projectId": "3d98fcb4-ee36-46e1-afb2-0d5a8d91aeb0",
+  "projectRevision": 2,
+  "exportedAt": "2026-10-02T10:41:42.578Z",
+  "capabilities": [
+    {
+      "location": "aafd4bb8-8600-4851-a922-198dcd510565",
+      "feature": "장면 효과: fade-in",
+      "capability": "unsupported",
+      "message": "효과 플러그인·장면 전환은 변환하지 않습니다. 수동 키프레임만 아래 범위에서 적용합니다."
+    },
+    {
+      "location": "aafd4bb8-8600-4851-a922-198dcd510565",
+      "elementId": "bf396fc6-dfb3-4ba8-a688-aba7f462a4d4",
+      "feature": "text",
+      "capability": "approximated",
+      "message": "편집 가능한 Blender Text입니다. 번들 기본 글꼴을 사용하며 한글 글리프·박스 줄바꿈을 위해 적법한 TTF/OTF를 직접 지정해야 합니다."
+    },
+    {
+      "location": "aafd4bb8-8600-4851-a922-198dcd510565",
+      "elementId": "bf396fc6-dfb3-4ba8-a688-aba7f462a4d4",
+      "feature": "slide-up",
+      "capability": "unsupported",
+      "message": "편집기 효과 프리셋은 대상 프로그램에서 다시 설정해야 합니다."
+    },
+    {
+      "location": "aafd4bb8-8600-4851-a922-198dcd510565",
+      "elementId": "db078bad-cd2b-43c2-b05a-e547b21c7b38",
+      "feature": "text",
+      "capability": "approximated",
+      "message": "편집 가능한 Blender Text입니다. 번들 기본 글꼴을 사용하며 한글 글리프·박스 줄바꿈을 위해 적법한 TTF/OTF를 직접 지정해야 합니다."
+    },
+    {
+      "location": "aafd4bb8-8600-4851-a922-198dcd510565",
+      "elementId": "db078bad-cd2b-43c2-b05a-e547b21c7b38",
+      "feature": "fade-in",
+      "capability": "unsupported",
+      "message": "편집기 효과 프리셋은 대상 프로그램에서 다시 설정해야 합니다."
+    },
+    {
+      "location": "color",
+      "feature": "색 관리",
+      "capability": "approximated",
+      "message": "sRGB 값을 선형 RGB로 변환하고 Emission + Standard view를 설정합니다. 색 프로파일과 디스플레이까지 동일하게 재현한다고 보장하지 않습니다."
+    }
+  ],
+  "font": {
+    "requested": "Pretendard",
+    "embedded": false,
+    "note": "글꼴 파일은 포함하지 않습니다. 대상 컴퓨터에 같은 글꼴을 설치하고 라이선스를 확인하세요."
+  },
+  "assets": [],
+  "generatedProjectFile": false,
+  "note": "스크립트와 JSON 패키지입니다. .aep 또는 .blend 바이너리 파일을 생성하지 않았습니다. 대상 프로그램에서 실행하고 저장하세요."
+}

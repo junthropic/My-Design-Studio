@@ -1,0 +1,149 @@
+.gallery-filters {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-wrap: wrap;
+  margin: -5px 0 23px;
+}
+.gallery-filters > label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 7px;
+}
+.gallery-filters select {
+  font-size: 10px;
+  padding: 8px 10px;
+  max-width: 215px;
+}
+.gallery-results {
+  font-size: 10px;
+  color: #8995ad;
+  margin-left: auto;
+}
+.gallery-card-tags {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  padding: 0 16px 13px;
+}
+.gallery-card-tags button {
+  font-size: 8px;
+  color: #98a9ca;
+  background: #1b2434;
+  border: 1px solid #2e3c55;
+  border-radius: 4px;
+  padding: 3px 6px;
+}
+.gallery-card-tags button:hover {
+  color: #d3dfff;
+  border-color: #6980ad;
+}
+.gallery-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 13px;
+  border-top: 1px solid #2a3449;
+  background: #131a25;
+}
+.gallery-card-actions .text-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 9px;
+}
+.gallery-card-actions .icon-button {
+  height: 25px;
+  width: 25px;
+}
+.gallery-card-actions .icon-button:first-of-type {
+  margin-left: auto;
+}
+.gallery-card-actions .gallery-delete:hover {
+  color: #f0a5b6;
+  background: #472b39;
+}
+.gallery-dialog {
+  margin: auto;
+  border: 1px solid #46516a;
+  background: #181f2d;
+  color: #e7ebf6;
+  max-height: 88vh;
+  overflow: auto;
+  box-shadow: 0 24px 80px #0009;
+}
+.gallery-dialog::backdrop {
+  background: #050812b8;
+  backdrop-filter: blur(4px);
+}
+.gallery-form {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+.gallery-form input,
+.gallery-form textarea,
+.gallery-form select {
+  width: 100%;
+}
+.gallery-form .button-row {
+  justify-content: flex-end;
+  margin-top: 0;
+}
+.gallery-form .help {
+  margin-top: 0;
+}
+.gallery-memberships {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 20px 0;
+}
+.gallery-memberships label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid #34425a;
+  border-radius: 7px;
+}
+.gallery-memberships small {
+  margin-left: auto;
+  color: #8293b1;
+  font-size: 9px;
+}
+.gallery-delete-copy {
+  font-size: 12px;
+  line-height: 1.9;
+}
+.gallery-danger {
+  background: #793b4e;
+  border-color: #a6536c;
+  color: #fff1f4;
+}
+.gallery-danger:hover {
+  background: #92475d;
+}
+.gallery-dialog .comparison-grid {
+  margin-top: 22px;
+}
+.gallery-dialog .error-text {
+  font-size: 11px;
+}
+@media (max-width: 760px) {
+  .gallery-filters select {
+    max-width: 100%;
+    font-size: 9px;
+  }
+  .gallery-results {
+    margin-left: 0;
+  }
+  .gallery-dialog {
+    width: calc(100% - 32px);
+  }
+  .gallery-card-actions .text-button {
+    font-size: 10px;
+  }
+}

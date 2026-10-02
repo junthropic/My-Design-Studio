@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-10-02T12:52:07.220Z",
+  "productionCode": {
+    "scripts/check-windows-signatures.ps1": "193291082f843e62269cdbdaa36bc6df0a29222060867317af1403edd1530496",
+    "scripts/hidden-build.cjs": "e937be630aef2a177c83d49c8820704895e0867764783f34455bd60d745a9aed",
+    "scripts/nsis-safe-extraction.mjs": "0b7151f69e48c064a64765fa50f4fd5d51bd518c1c6c28c92a2a5406d1e788d3",
+    "scripts/read-pe-signature.ps1": "658a9326e1abc1ed9204d82f8f415ebb3f8d937695482c831e438074ea317518",
+    "scripts/signature-evidence.mjs": "388c629b783e38534c345f3fe30b390d34dec60f73b044ab32c614d86cbd115e",
+    "scripts/signing-build.mjs": "2b99a7443a614d42af9f4c389fab93f9a815788cf0413c39aa6455b8735be257",
+    "scripts/signing-config.mjs": "eb1127b7ba85f6dc005011ef1b211d671ce67d2e1483e7837f95e40ae489a404",
+    "scripts/signing-ownership.json": "c6c69f509fc5a999bde8e0f0348fb1301606158899b2325c3cbff3f60afc50f1",
+    "scripts/signing-pipeline.mjs": "39e7925425392cd9d59063fe78b75d6c0864fa6af55d8154e4cf283ddbe37383",
+    "scripts/signing-prepare.mjs": "3e59198a58a1eacd1e486967421ad31809292cf685bbe6d8aa24530666732df0",
+    "scripts/signing-providers.mjs": "c6eaa4afa0eda0c0926c155cfe3903db3794b46e6109424db5a39b434717a87b",
+    "scripts/signing-release.mjs": "6cc74c7371c4c5fb5caa9fdc4183ee82ff1ffd4aba766a6e0bfead16017cfd7a",
+    "scripts/SIGNING.md": "7558e9ed9680ad1566fef73280dae85ab85c529aeff5eb4627e3d3bd58a8b9bd",
+    "scripts/verify-windows-release.mjs": "bb0cc07dac1275b0564f8d7945955b88abb1d310f38b98e918d879de2d9765f3",
+    "scripts/windows-verification.mjs": "09ede2ca426de2469dc7a0e50cbfe23837db7fd4a2aa0a36e6b565c287a9443c",
+    "tests/hidden-build.test.mjs": "87369f5d15a1f8a10fce8f7ef0d0145f0e1c0002d4bbd366d9c2d5d02c5c42ac",
+    "tests/nsis-safe-extraction.test.mjs": "993ff0692e8dca02f3a1f517fe1b94bfb10a41c905789eb0a497f1b3de8d5d82",
+    "tests/release-verification.test.mjs": "09e222618ea2c8c41465f7621c2c27f2b66d4d55beba8214fdf705e859fe63f8",
+    "tests/signature-evidence.test.mjs": "ad14c01584e4bf864a926b852dc6929ae8637662fd3060294549cfaddbb5de31",
+    "tests/signing-build.test.mjs": "41fa3e5d1c7ae2180c611df75d460a03128bffde3f7efeb04b4e2cc069f564d7",
+    "tests/signing-config.test.ts": "4450fc7d7e4a025cfbd5e31a832ad54bf2874c40eb735e4afe9df8a07989b805",
+    "tests/signing-pipeline.integration.test.mjs": "a844be826e2b4d52a4c497002884bf493a8e663ad073c1f4e2c7f4107962ea72",
+    "tests/signing-providers.test.mjs": "6a5c776622370d4c6345946284ac87548d4af6faee91bfb695af59833fb93c62",
+    "package-lock.json": "d81fa0ba08db2059d017087322035cce1385bbe017d02906877949c3e1b48114"
+  },
+  "protectedArtifacts": {
+    "../verification/Production_Signing_준비검증.md": "58f912a6844c05d72f5d4e7ccb8e02d97703866c1951d9a53e030a4ca6219caa",
+    "../verification/signing-target-manifest.json": "723b8884f567597d650926718eea1c2b845e1ef86c14a45dab1eaf1d1f11f838",
+    "../Design-Studio-0.1.0-source.zip": "bf930f16f8c7f1343f46c234ae46b5b1a7aa89639758de385d800f207c2d97c9",
+    "../verification/app-control-diagnosis.json": "0e8b421ead393db07dbff9f9267b3b18449e48aec5ae03a22fa63d5e8b57d06a",
+    "release/Design Studio Setup 0.1.0.exe": "49dfc0032f6359354fce1fbab6bd8830604cf259c32daf4b122c2c8e16c42bfd"
+  },
+  "productionTests": [
+    {
+      "path": "tests/hidden-build.test.mjs",
+      "passed": 1
+    },
+    {
+      "path": "tests/nsis-safe-extraction.test.mjs",
+      "passed": 5
+    },
+    {
+      "path": "tests/release-verification.test.mjs",
+      "passed": 3
+    },
+    {
+      "path": "tests/signature-evidence.test.mjs",
+      "passed": 16
+    },
+    {
+      "path": "tests/signing-build.test.mjs",
+      "passed": 6
+    },
+    {
+      "path": "tests/signing-config.test.ts",
+      "passed": 13
+    },
+    {
+      "path": "tests/signing-pipeline.integration.test.mjs",
+      "passed": 18
+    },
+    {
+      "path": "tests/signing-providers.test.mjs",
+      "passed": 60
+    }
+  ],
+  "originalScripts": {
+    "dev": "tsx server/index.ts",
+    "ui:dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build --configLoader runner && tsx src/motion/build.ts && tsup server/index.ts --format esm --platform node --out-dir dist-server --external electron --external @remotion/renderer --external @remotion/bundler && tsup electron/main.ts --format cjs --platform node --out-dir dist-electron --external electron",
+    "start": "node dist-server/index.js",
+    "desktop": "electron .",
+    "test": "vitest run --configLoader runner",
+    "package:dir": "npm run build && tsx src/motion/build.ts --browser && electron-builder --dir",
+    "package:win": "npm run build && tsx src/motion/build.ts --browser && electron-builder --win nsis",
+    "signing:check": "node scripts/signing-config.mjs --check",
+    "signing:manifest": "node scripts/signing-prepare.mjs",
+    "signing:prepare": "node scripts/signing-prepare.mjs --mock-and-check",
+    "signing:release": "node scripts/signing-release.mjs",
+    "package:win:signed": "node scripts/signing-config.mjs --package",
+    "verify:win": "node scripts/verify-windows-release.mjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  }
+}

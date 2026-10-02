@@ -1,0 +1,45 @@
+[data-theme="light"] {
+  --font-family: "Pretendard";
+  --font-title: 40px;
+  --font-body: 16px;
+  --font-lineHeight: 1.55;
+  --font-tracking: 0px;
+  --radius-card: 20px;
+  --space-base: 24px;
+  --effect-blur: 20px;
+  --effect-glow: 0.45;
+  --effect-decor: 1;
+  --motion-duration: 500;
+  --color-success: #51c9a5;
+  --color-danger: #ff758c;
+  --color-onAccent: #ffffff;
+  --color-bg: #eff2fc;
+  --color-surface: #ffffff;
+  --color-text: #172244;
+  --color-muted: #52617d;
+  --color-border: #bbc5df;
+  --color-accent: #6b759e;
+}
+
+[data-theme="dark"] {
+  --font-family: "Pretendard";
+  --font-title: 40px;
+  --font-body: 16px;
+  --font-lineHeight: 1.55;
+  --font-tracking: 0px;
+  --radius-card: 20px;
+  --space-base: 24px;
+  --effect-blur: 20px;
+  --effect-glow: 0.45;
+  --effect-decor: 1;
+  --motion-duration: 500;
+  --color-success: #51c9a5;
+  --color-danger: #ff758c;
+  --color-onAccent: #10131a;
+  --color-bg: #0e1220;
+  --color-surface: #1a2033;
+  --color-text: #f1f4ff;
+  --color-muted: #a9b1cb;
+  --color-border: #35405b;
+  --color-accent: #adbcff;
+}

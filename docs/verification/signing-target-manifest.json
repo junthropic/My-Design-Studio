@@ -1,0 +1,1440 @@
+{
+  "schemaVersion": 1,
+  "mode": "preparation",
+  "status": "awaiting-production-credential",
+  "createdAt": "2026-10-02T12:38:29.933Z",
+  "signingPolicy": {
+    "key": "RSA",
+    "fileDigest": "SHA256",
+    "timestamp": "RFC3161",
+    "timestampDigest": "SHA256"
+  },
+  "actualSigningPerformed": false,
+  "generatedComponents": [
+    {
+      "path": "Design Studio Setup 0.1.0.__uninstaller.exe",
+      "kind": "uninstaller",
+      "ownership": "generated-installer",
+      "origin": "electron-builder 26.15.3 NSIS default templates and NSIS 3.0.4.1; generated installer/uninstaller for Design Studio 0.1.0.",
+      "purpose": "Install or uninstall this application distribution. Strict filenames and sequence are derived from package version by the signing orchestrator.",
+      "licenseEvidence": [
+        "node_modules/app-builder-lib/package.json (MIT; @26.15.3)",
+        "node_modules/app-builder-lib/templates/nsis/installer.nsi",
+        "../../work/builder-cache/nsis-3.0.4.1/nsis-3.0.4.1-1mx3n/COPYING"
+      ],
+      "action": "sign-installer-component",
+      "beforeSHA256": null,
+      "afterSHA256": null,
+      "status": "generated-after-internal-verification"
+    }
+  ],
+  "entries": [
+    {
+      "path": "Design Studio.exe",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "first-party",
+      "origin": "Design Studio 0.1.0 application distribution; Electron 37.10.3 executable shell with application metadata. This does not claim authorship of Electron or Chromium.",
+      "purpose": "Launch the local desktop application and its embedded Node/Chromium runtime.",
+      "licenseEvidence": [
+        "package.json (design-studio@0.1.0)",
+        "node_modules/electron/LICENSE",
+        "release/win-unpacked/LICENSE.electron.txt",
+        "release/win-unpacked/LICENSES.chromium.html"
+      ],
+      "action": "sign-first-party",
+      "beforeSHA256": "67ff9ee508f7bf4610b61732521dd28567166330d10cfc50eca46290e5f4b37c",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "d3dcompiler_47.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "electron@37.10.3 Windows x64 distribution; upstream Electron/Chromium graphics, media, and runtime dependencies.",
+      "purpose": "Electron graphics/media runtime; preserve upstream copyrights and any valid vendor Authenticode signature.",
+      "licenseEvidence": [
+        "node_modules/electron/package.json (electron@37.10.3)",
+        "release/win-unpacked/LICENSE.electron.txt",
+        "release/win-unpacked/LICENSES.chromium.html"
+      ],
+      "action": "preserve-existing-signature",
+      "beforeSHA256": "289767b49dc8525bce262ea06fee4ef9fced2e131a55b25654ce871c1f0498b2",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "Valid",
+        "signTool": {
+          "status": "Valid",
+          "exitCode": 0
+        },
+        "rsa": true,
+        "sha256": true,
+        "rfc3161": true,
+        "timestampSha256": true,
+        "timestampValid": true,
+        "chainValid": true,
+        "signerThumbprint": "7C94971221A799907BB45665663BBFD587BAC9F8"
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "dxcompiler.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "electron@37.10.3 Windows x64 distribution; upstream Electron/Chromium graphics, media, and runtime dependencies.",
+      "purpose": "Electron graphics/media runtime; preserve upstream copyrights and any valid vendor Authenticode signature.",
+      "licenseEvidence": [
+        "node_modules/electron/package.json (electron@37.10.3)",
+        "release/win-unpacked/LICENSE.electron.txt",
+        "release/win-unpacked/LICENSES.chromium.html"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "6bf9d1e2befc53a95b7b7c374def814af0e1a21ddeb617779397e3e6ccd3b497",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "dxil.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "electron@37.10.3 Windows x64 distribution; upstream Electron/Chromium graphics, media, and runtime dependencies.",
+      "purpose": "Electron graphics/media runtime; preserve upstream copyrights and any valid vendor Authenticode signature.",
+      "licenseEvidence": [
+        "node_modules/electron/package.json (electron@37.10.3)",
+        "release/win-unpacked/LICENSE.electron.txt",
+        "release/win-unpacked/LICENSES.chromium.html"
+      ],
+      "action": "preserve-existing-signature",
+      "beforeSHA256": "473f5e853120a5b6ca583ac51f453664abae15c0db1d307f29c8bf7a7b89f96c",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "Valid",
+        "signTool": {
+          "status": "Valid",
+          "exitCode": 0
+        },
+        "rsa": true,
+        "sha256": true,
+        "rfc3161": true,
+        "timestampSha256": true,
+        "timestampValid": true,
+        "chainValid": true,
+        "signerThumbprint": "0BD8C56733FDCC06F8CB919FF5A200E39B1ACF71"
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "ffmpeg.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "electron@37.10.3 Windows x64 distribution; upstream Electron/Chromium graphics, media, and runtime dependencies.",
+      "purpose": "Electron graphics/media runtime; preserve upstream copyrights and any valid vendor Authenticode signature.",
+      "licenseEvidence": [
+        "node_modules/electron/package.json (electron@37.10.3)",
+        "release/win-unpacked/LICENSE.electron.txt",
+        "release/win-unpacked/LICENSES.chromium.html"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "67f37568031d61040ae13022a8ec933f7d4ca7faecbb71a701f0b36489c5a330",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "libEGL.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "electron@37.10.3 Windows x64 distribution; upstream Electron/Chromium graphics, media, and runtime dependencies.",
+      "purpose": "Electron graphics/media runtime; preserve upstream copyrights and any valid vendor Authenticode signature.",
+      "licenseEvidence": [
+        "node_modules/electron/package.json (electron@37.10.3)",
+        "release/win-unpacked/LICENSE.electron.txt",
+        "release/win-unpacked/LICENSES.chromium.html"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "4e33a8b0632cdab12c0fab456a7d76c3c608fc9940746acd158effc493ba49c6",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "libGLESv2.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "electron@37.10.3 Windows x64 distribution; upstream Electron/Chromium graphics, media, and runtime dependencies.",
+      "purpose": "Electron graphics/media runtime; preserve upstream copyrights and any valid vendor Authenticode signature.",
+      "licenseEvidence": [
+        "node_modules/electron/package.json (electron@37.10.3)",
+        "release/win-unpacked/LICENSE.electron.txt",
+        "release/win-unpacked/LICENSES.chromium.html"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "1a606ebb09bc8bcb64edefffe3fccecf720b557b9f23ba2aa4331b58106d9991",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@esbuild/win32-x64/esbuild.exe",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "@esbuild/win32-x64@0.25.0, distributed with the runtime Remotion bundler dependency.",
+      "purpose": "Bundle authored motion compositions when the local renderer needs a composition build.",
+      "licenseEvidence": [
+        "node_modules/@esbuild/win32-x64/package.json (MIT)",
+        "node_modules/esbuild/LICENSE.md"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "8c048a375f06353168221688c7f87fad23a5b23f371f848f9e149ffde7f993a5",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@img/sharp-win32-x64/lib/libvips-42.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "@img/sharp-win32-x64@0.34.5; sharp addon and bundled libvips shared libraries. These are upstream dependencies, not first-party code.",
+      "purpose": "Image metadata, conversion, and export rendering.",
+      "licenseEvidence": [
+        "node_modules/@img/sharp-win32-x64/package.json (Apache-2.0 AND LGPL-3.0-or-later)",
+        "node_modules/@img/sharp-win32-x64/LICENSE",
+        "node_modules/@img/sharp-win32-x64/versions.json"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "f8d356def73941668252347b825055310e99023ff77c7d3036e592d0771e1529",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@img/sharp-win32-x64/lib/libvips-cpp-8.17.3.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "@img/sharp-win32-x64@0.34.5; sharp addon and bundled libvips shared libraries. These are upstream dependencies, not first-party code.",
+      "purpose": "Image metadata, conversion, and export rendering.",
+      "licenseEvidence": [
+        "node_modules/@img/sharp-win32-x64/package.json (Apache-2.0 AND LGPL-3.0-or-later)",
+        "node_modules/@img/sharp-win32-x64/LICENSE",
+        "node_modules/@img/sharp-win32-x64/versions.json"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "f1b3c3eeea1b6a8292a69d78dd2cd1debacb9951cabdd9217a57e34137570cd1",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@img/sharp-win32-x64/lib/sharp-win32-x64.node",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "@img/sharp-win32-x64@0.34.5; sharp addon and bundled libvips shared libraries. These are upstream dependencies, not first-party code.",
+      "purpose": "Image metadata, conversion, and export rendering.",
+      "licenseEvidence": [
+        "node_modules/@img/sharp-win32-x64/package.json (Apache-2.0 AND LGPL-3.0-or-later)",
+        "node_modules/@img/sharp-win32-x64/LICENSE",
+        "node_modules/@img/sharp-win32-x64/versions.json"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "afc813593f255968ddae8f1d66557e0f96484bb374606e4eb2267a7dbc7cb25a",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/avcodec-60.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled FFmpeg executable/shared library. No ownership of this dependency is claimed.",
+      "purpose": "Video/audio encoding, decoding, probing, resampling, or scaling for motion export.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "b65d252925037d170803a16cdab1391acb3a9179cd5f93e47f31eefbce535f5d",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/avcodec-61.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled FFmpeg executable/shared library. No ownership of this dependency is claimed.",
+      "purpose": "Video/audio encoding, decoding, probing, resampling, or scaling for motion export.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "6f08ee2fa8d8954c8e3444c0902d84fe8dc3d90b0243ed152d70deb9528ef535",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/avdevice-60.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled FFmpeg executable/shared library. No ownership of this dependency is claimed.",
+      "purpose": "Video/audio encoding, decoding, probing, resampling, or scaling for motion export.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "bb17bd3d39856f6c8940e86bc7336ab09151f17cac4a52eb0c5679ea3c171d46",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/avdevice-61.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled FFmpeg executable/shared library. No ownership of this dependency is claimed.",
+      "purpose": "Video/audio encoding, decoding, probing, resampling, or scaling for motion export.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "c5ee6c9cc419abbad39c0260d3f323e4d5534c2ff44b18899f268d834403bf3b",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/avfilter-10.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled FFmpeg executable/shared library. No ownership of this dependency is claimed.",
+      "purpose": "Video/audio encoding, decoding, probing, resampling, or scaling for motion export.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "04e7355aaa0452c6f8faae67c8a70d1d0418d63483409660605c3c33e05ef5e4",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/avfilter-9.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled FFmpeg executable/shared library. No ownership of this dependency is claimed.",
+      "purpose": "Video/audio encoding, decoding, probing, resampling, or scaling for motion export.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "ddeb084f55d2f5c9d3d33d0b5b238d3d66ab83744a853daada3bd6b1d0f765ba",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/avformat-60.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled FFmpeg executable/shared library. No ownership of this dependency is claimed.",
+      "purpose": "Video/audio encoding, decoding, probing, resampling, or scaling for motion export.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "0694f8549b8d56125150dfacc70d0f27ab199a1179055b43b7c386a381106a52",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/avformat-61.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled FFmpeg executable/shared library. No ownership of this dependency is claimed.",
+      "purpose": "Video/audio encoding, decoding, probing, resampling, or scaling for motion export.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "3915696eac0eecbdb4fc3b299346e5be9b25a32afec4f319ab4b28e7dd3cd8d2",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/avutil-58.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled FFmpeg executable/shared library. No ownership of this dependency is claimed.",
+      "purpose": "Video/audio encoding, decoding, probing, resampling, or scaling for motion export.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "71d5c71fab96ab66f0826a310418e010f796dc1c88d5c48d233cad080c5f0c40",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/avutil-59.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled FFmpeg executable/shared library. No ownership of this dependency is claimed.",
+      "purpose": "Video/audio encoding, decoding, probing, resampling, or scaling for motion export.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "fd80aac7849a81bbfccaded5cbbf3028580c50494da3a43833019383e55adc66",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/ffmpeg.exe",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled FFmpeg executable/shared library. No ownership of this dependency is claimed.",
+      "purpose": "Video/audio encoding, decoding, probing, resampling, or scaling for motion export.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "d60f4e7c6496dcc04333cb4b752597e782657892284f6302b47deadbd37f2639",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/ffprobe.exe",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled FFmpeg executable/shared library. No ownership of this dependency is claimed.",
+      "purpose": "Video/audio encoding, decoding, probing, resampling, or scaling for motion export.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "28ac860611e8f42ccfe7a59eb4a2f9dbfb9a5eb15d14af284401d1083be426e6",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/libgcc_s_seh-1.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled upstream runtime dependency libgcc_s_seh-1.dll. No ownership of this dependency is claimed.",
+      "purpose": "Native Remotion compositor and its required runtime libraries.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "e298fa2e8729b17208ccd20b585b01ef58d10fb050eb03c72fdb04ea5462e766",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/libssp-0.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled upstream runtime dependency libssp-0.dll. No ownership of this dependency is claimed.",
+      "purpose": "Native Remotion compositor and its required runtime libraries.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "647dbde6fe577e2d8710f96510556c2405a42a4f10fc30e4e10521ce036584b4",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/libstdc++-6.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled upstream runtime dependency libstdc++-6.dll. No ownership of this dependency is claimed.",
+      "purpose": "Native Remotion compositor and its required runtime libraries.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "821e40488ee797e29d173e42d5bec669203fd9676a687acf3d0a21a7a1446b28",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/libvpx-1.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled upstream runtime dependency libvpx-1.dll. No ownership of this dependency is claimed.",
+      "purpose": "Native Remotion compositor and its required runtime libraries.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "6656164716a3deeba19d18b47f31acb16ccc628d225aa06e8bd29da80fa6d83f",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/libwinpthread-1.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled upstream runtime dependency libwinpthread-1.dll. No ownership of this dependency is claimed.",
+      "purpose": "Native Remotion compositor and its required runtime libraries.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "707e0add151c8d7e150a3fe0ba8c0c562505c3859f687b82de8a1af6c2b3bb73",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/msvcr100.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled upstream runtime dependency msvcr100.dll. No ownership of this dependency is claimed.",
+      "purpose": "Native Remotion compositor and its required runtime libraries.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "action": "preserve-existing-signature",
+      "beforeSHA256": "2b7ab898b2f64f4cd1ae651c93d7eb9556208fd8d8d40d425e856c83d86d2346",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "Valid",
+        "signTool": {
+          "status": "Valid",
+          "exitCode": 0
+        },
+        "rsa": true,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": true,
+        "chainValid": true,
+        "signerThumbprint": "98ED99A67886D020C564923B7DF25E9AC019DF26"
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/remotion.exe",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; upstream Remotion native compositor. No ownership of this dependency is claimed.",
+      "purpose": "Native Remotion compositor and its required runtime libraries.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "9cc7579c3a7c9f09b61421ebe1fac4109ee4ca443e536b3122279b9897b669d9",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/swresample-4.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled FFmpeg executable/shared library. No ownership of this dependency is claimed.",
+      "purpose": "Video/audio encoding, decoding, probing, resampling, or scaling for motion export.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "31f08bd1b0996ec52a96b9dac6786289559f6b29902cc2ec455fdb7bd35f4ec0",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/swresample-5.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled FFmpeg executable/shared library. No ownership of this dependency is claimed.",
+      "purpose": "Video/audio encoding, decoding, probing, resampling, or scaling for motion export.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "b29c4a79d99eeb568557c071764c7b603984601c9141fc160dccdebb4e977dc5",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/swscale-7.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled FFmpeg executable/shared library. No ownership of this dependency is claimed.",
+      "purpose": "Video/audio encoding, decoding, probing, resampling, or scaling for motion export.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "1f96a24e81da9fe32d35d3db9780fcdd4048d5c62b0cb2795cf7c95975f40326",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/swscale-8.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled FFmpeg executable/shared library. No ownership of this dependency is claimed.",
+      "purpose": "Video/audio encoding, decoding, probing, resampling, or scaling for motion export.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "4532cede2e75f39710386f2c0ac330dfe81aabb38fe254cc3ab4d3acc311b1b4",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/zlib1.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled upstream runtime dependency zlib1.dll. No ownership of this dependency is claimed.",
+      "purpose": "Native Remotion compositor and its required runtime libraries.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "action": "preserve-existing-signature",
+      "beforeSHA256": "0ab6e9f64123d6a9d80ec6a5f590effe9f1858f84dab92e9c02c2c72c8cfd131",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "Valid",
+        "signTool": {
+          "status": "Valid",
+          "exitCode": 0
+        },
+        "rsa": true,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": true,
+        "chainValid": true,
+        "signerThumbprint": "2122EF45A9AC0BDFB809E868873F17CB321BC23D"
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "resources/elevate.exe",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "electron-builder 26.15.3 NSIS 3.0.4.1 elevate helper copied by AppPackageHelper; upstream bundled helper.",
+      "purpose": "Support installer maintenance/elevation according to the selected NSIS installation mode.",
+      "licenseEvidence": [
+        "node_modules/app-builder-lib/package.json (MIT; @26.15.3)",
+        "../../work/builder-cache/nsis-3.0.4.1/nsis-3.0.4.1-1mx3n/COPYING"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "9b1fbf0c11c520ae714af8aa9af12cfd48503eedecd7398d8992ee94d1b4dc37",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "resources/remotion-browser/chrome-headless-shell.exe",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "Remotion-provisioned Chromium headless shell from vendor/remotion-browser; upstream Chromium and graphics dependencies, not first-party code.",
+      "purpose": "Render authored motion compositions in the bundled local browser.",
+      "licenseEvidence": [
+        "vendor/remotion-browser/LICENSE.headless_shell",
+        "release/win-unpacked/resources/remotion-browser/LICENSE.headless_shell",
+        "node_modules/@remotion/renderer/package.json (@4.0.363)"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "fffdc5e77fae67391e154d92f2084f84fec410632a48211ae0ab652dc64aeacf",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "resources/remotion-browser/libEGL.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "Remotion-provisioned Chromium headless shell from vendor/remotion-browser; upstream Chromium and graphics dependencies, not first-party code.",
+      "purpose": "Render authored motion compositions in the bundled local browser.",
+      "licenseEvidence": [
+        "vendor/remotion-browser/LICENSE.headless_shell",
+        "release/win-unpacked/resources/remotion-browser/LICENSE.headless_shell",
+        "node_modules/@remotion/renderer/package.json (@4.0.363)"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "95f42e8dc0a12df9855217aeb26c5f1f0c1c5b5a58c1fad22187eb23d7fd72d0",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "resources/remotion-browser/libGLESv2.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "Remotion-provisioned Chromium headless shell from vendor/remotion-browser; upstream Chromium and graphics dependencies, not first-party code.",
+      "purpose": "Render authored motion compositions in the bundled local browser.",
+      "licenseEvidence": [
+        "vendor/remotion-browser/LICENSE.headless_shell",
+        "release/win-unpacked/resources/remotion-browser/LICENSE.headless_shell",
+        "node_modules/@remotion/renderer/package.json (@4.0.363)"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "d101aa2b44804c3b2dd2cc155e07396ee4e3d0d317460d41844f6ca89f2a266e",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "resources/remotion-browser/vk_swiftshader.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "Remotion-provisioned Chromium headless shell from vendor/remotion-browser; upstream Chromium and graphics dependencies, not first-party code.",
+      "purpose": "Render authored motion compositions in the bundled local browser.",
+      "licenseEvidence": [
+        "vendor/remotion-browser/LICENSE.headless_shell",
+        "release/win-unpacked/resources/remotion-browser/LICENSE.headless_shell",
+        "node_modules/@remotion/renderer/package.json (@4.0.363)"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "74c3a2bb48b7d980b4b5f5b8c8753a94aaa086643897638fe007335748d2e4d2",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "resources/remotion-browser/vulkan-1.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "Remotion-provisioned Chromium headless shell from vendor/remotion-browser; upstream Chromium and graphics dependencies, not first-party code.",
+      "purpose": "Render authored motion compositions in the bundled local browser.",
+      "licenseEvidence": [
+        "vendor/remotion-browser/LICENSE.headless_shell",
+        "release/win-unpacked/resources/remotion-browser/LICENSE.headless_shell",
+        "node_modules/@remotion/renderer/package.json (@4.0.363)"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "a20be5e83ee19b8238fa9d300ce018f0018d1217648147b977b663966765f35f",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "vk_swiftshader.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "electron@37.10.3 Windows x64 distribution; upstream Electron/Chromium graphics, media, and runtime dependencies.",
+      "purpose": "Electron graphics/media runtime; preserve upstream copyrights and any valid vendor Authenticode signature.",
+      "licenseEvidence": [
+        "node_modules/electron/package.json (electron@37.10.3)",
+        "release/win-unpacked/LICENSE.electron.txt",
+        "release/win-unpacked/LICENSES.chromium.html"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "176adce81d9f0f1aac302806be3dbb67abda46e13355bb85c4868057c6e3a223",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "vulkan-1.dll",
+      "kind": "internal",
+      "pe": true,
+      "ownership": "bundled-third-party",
+      "origin": "electron@37.10.3 Windows x64 distribution; upstream Electron/Chromium graphics, media, and runtime dependencies.",
+      "purpose": "Electron graphics/media runtime; preserve upstream copyrights and any valid vendor Authenticode signature.",
+      "licenseEvidence": [
+        "node_modules/electron/package.json (electron@37.10.3)",
+        "release/win-unpacked/LICENSE.electron.txt",
+        "release/win-unpacked/LICENSES.chromium.html"
+      ],
+      "action": "sign-bundled-distribution",
+      "beforeSHA256": "d5acc73241b46dcfd7ea5f970eab9fdc2ac5a3dc737e23d5947980972ed0a2b4",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    },
+    {
+      "path": "Design Studio Setup 0.1.0.exe",
+      "kind": "installer",
+      "pe": true,
+      "ownership": "generated-installer",
+      "origin": "electron-builder 26.15.3 NSIS default templates and NSIS 3.0.4.1; generated installer/uninstaller for Design Studio 0.1.0.",
+      "purpose": "Install or uninstall this application distribution. Strict filenames and sequence are derived from package version by the signing orchestrator.",
+      "licenseEvidence": [
+        "node_modules/app-builder-lib/package.json (MIT; @26.15.3)",
+        "node_modules/app-builder-lib/templates/nsis/installer.nsi",
+        "../../work/builder-cache/nsis-3.0.4.1/nsis-3.0.4.1-1mx3n/COPYING"
+      ],
+      "action": "sign-installer-component",
+      "beforeSHA256": "49dfc0032f6359354fce1fbab6bd8830604cf259c32daf4b122c2c8e16c42bfd",
+      "afterSHA256": null,
+      "before": {
+        "authenticodeStatus": "NotSigned",
+        "signTool": {
+          "status": "Invalid",
+          "exitCode": 1
+        },
+        "rsa": false,
+        "sha256": false,
+        "rfc3161": false,
+        "timestampSha256": false,
+        "timestampValid": false,
+        "chainValid": false,
+        "signerThumbprint": null
+      },
+      "after": null,
+      "status": "planned"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "format": "tokens",
+  "projectId": "3d98fcb4-ee36-46e1-afb2-0d5a8d91aeb0",
+  "projectRevision": 2,
+  "exportedAt": "2026-10-02T10:41:41.040Z",
+  "capabilities": [
+    {
+      "location": "tokens",
+      "feature": "토큰·타입·단위",
+      "capability": "native",
+      "message": "DTCG 색 공간, px 치수, ms 지속시간, typography 배수 행간과 출처 추적을 포함합니다."
+    }
+  ],
+  "font": {
+    "requested": "Pretendard",
+    "embedded": false,
+    "note": "글꼴 파일은 포함하지 않습니다. 대상 컴퓨터에 같은 글꼴을 설치하고 라이선스를 확인하세요."
+  },
+  "dtcgVersion": "2025.10",
+  "target": "web",
+  "credentialsIncluded": false
+}

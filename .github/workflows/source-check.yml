@@ -1,0 +1,22 @@
+name: Source checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: node node_modules/typescript/bin/tsc --noEmit
+      - name: Unit and integration checks (optional local fixtures may be skipped)
+        run: node --require ./scripts/hidden-build.cjs node_modules/vitest/vitest.mjs run --configLoader runner --exclude tests/ui.test.ts
+      # Release publication intentionally uses the verified Windows machine and publish:local.
+      # CI source checks are not a substitute for the real EXE acceptance test.

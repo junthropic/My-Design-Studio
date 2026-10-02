@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "format": "project",
+  "projectId": "57f1489b-b89d-446a-82da-6d368ccc1491",
+  "projectRevision": 0,
+  "exportedAt": "2026-10-02T10:55:05.413Z",
+  "capabilities": [
+    {
+      "location": "project",
+      "feature": "편집 원본",
+      "capability": "native",
+      "message": "모든 편집 모델과 데이터 스냅샷을 보존합니다."
+    },
+    {
+      "location": "datasets",
+      "feature": "API 연결",
+      "capability": "unsupported",
+      "message": "API 인증정보와 연결 설정은 패키지에서 제외됩니다. 가져온 데이터 스냅샷은 유지됩니다."
+    }
+  ],
+  "font": {
+    "requested": "Pretendard",
+    "embedded": false,
+    "note": "대상 문서의 글꼴 임베딩은 보장하지 않습니다. 동봉 자산과 대상 도구의 글꼴 설치 여부·라이선스를 확인하세요."
+  },
+  "assets": []
+}

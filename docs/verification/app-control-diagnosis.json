@@ -1,0 +1,479 @@
+{
+  "checkedAt": "2026-10-02T11:48:11.7461844Z",
+  "status": "blocked-awaiting-trusted-signing",
+  "win32Error": 4551,
+  "policyName": "VerifiedAndReputableDesktop",
+  "sacState": 1,
+  "policyGuid": "{0283ac0f-fff1-49ae-ada1-8a933130cad6}",
+  "matchedEventTime": "2026-10-02T19:56:28.2620465+09:00",
+  "matchedEventId": 3077,
+  "installedCodeSigningCertificateCount": 0,
+  "inspectedStores": [
+    "CurrentUser/My",
+    "LocalMachine/My"
+  ],
+  "binarySignatureInventory": {
+    "CheckedAt": "2026-10-02T11:38:21.8443526Z",
+    "AppDirectory": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked",
+    "PolicyChanged": false,
+    "FileCount": 44,
+    "InvalidCount": 40,
+    "NonRsaCount": 0,
+    "Passed": false,
+    "Note": "Authenticode trust alone does not certify Smart App Control acceptance; launch and every feature must still be tested under enforcement.",
+    "Files": [
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\d3dcompiler_47.dll",
+        "Size": 4916728,
+        "SHA256": "289767b49dc8525bce262ea06fee4ef9fced2e131a55b25654ce871c1f0498b2",
+        "Status": "Valid",
+        "Signer": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+        "SignerThumbprint": "7C94971221A799907BB45665663BBFD587BAC9F8",
+        "PublicKeyAlgorithm": "1.2.840.113549.1.1.1",
+        "TimestampPresent": true
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\Design Studio.exe",
+        "Size": 204521984,
+        "SHA256": "67ff9ee508f7bf4610b61732521dd28567166330d10cfc50eca46290e5f4b37c",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\dxcompiler.dll",
+        "Size": 25894912,
+        "SHA256": "6bf9d1e2befc53a95b7b7c374def814af0e1a21ddeb617779397e3e6ccd3b497",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\dxil.dll",
+        "Size": 1502800,
+        "SHA256": "473f5e853120a5b6ca583ac51f453664abae15c0db1d307f29c8bf7a7b89f96c",
+        "Status": "Valid",
+        "Signer": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+        "SignerThumbprint": "0BD8C56733FDCC06F8CB919FF5A200E39B1ACF71",
+        "PublicKeyAlgorithm": "1.2.840.113549.1.1.1",
+        "TimestampPresent": true
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\ffmpeg.dll",
+        "Size": 3039232,
+        "SHA256": "67f37568031d61040ae13022a8ec933f7d4ca7faecbb71a701f0b36489c5a330",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\libEGL.dll",
+        "Size": 505344,
+        "SHA256": "4e33a8b0632cdab12c0fab456a7d76c3c608fc9940746acd158effc493ba49c6",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\libGLESv2.dll",
+        "Size": 8049664,
+        "SHA256": "1a606ebb09bc8bcb64edefffe3fccecf720b557b9f23ba2aa4331b58106d9991",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\vk_swiftshader.dll",
+        "Size": 5530624,
+        "SHA256": "176adce81d9f0f1aac302806be3dbb67abda46e13355bb85c4868057c6e3a223",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\vulkan-1.dll",
+        "Size": 922112,
+        "SHA256": "d5acc73241b46dcfd7ea5f970eab9fdc2ac5a3dc737e23d5947980972ed0a2b4",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\resources\\elevate.exe",
+        "Size": 107520,
+        "SHA256": "9b1fbf0c11c520ae714af8aa9af12cfd48503eedecd7398d8992ee94d1b4dc37",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\resources\\app.asar.unpacked\\node_modules\\@esbuild\\win32-x64\\esbuild.exe",
+        "Size": 10497024,
+        "SHA256": "8c048a375f06353168221688c7f87fad23a5b23f371f848f9e149ffde7f993a5",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\resources\\app.asar.unpacked\\node_modules\\@img\\sharp-win32-x64\\lib\\libvips-42.dll",
+        "Size": 19112960,
+        "SHA256": "f8d356def73941668252347b825055310e99023ff77c7d3036e592d0771e1529",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\resources\\app.asar.unpacked\\node_modules\\@img\\sharp-win32-x64\\lib\\libvips-cpp-8.17.3.dll",
+        "Size": 327168,
+        "SHA256": "f1b3c3eeea1b6a8292a69d78dd2cd1debacb9951cabdd9217a57e34137570cd1",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\resources\\app.asar.unpacked\\node_modules\\@img\\sharp-win32-x64\\lib\\sharp-win32-x64.node",
+        "Size": 433152,
+        "SHA256": "afc813593f255968ddae8f1d66557e0f96484bb374606e4eb2267a7dbc7cb25a",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\resources\\app.asar.unpacked\\node_modules\\@remotion\\compositor-win32-x64-msvc\\avcodec-60.dll",
+        "Size": 16481792,
+        "SHA256": "b65d252925037d170803a16cdab1391acb3a9179cd5f93e47f31eefbce535f5d",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\resources\\app.asar.unpacked\\node_modules\\@remotion\\compositor-win32-x64-msvc\\avcodec-61.dll",
+        "Size": 16414720,
+        "SHA256": "6f08ee2fa8d8954c8e3444c0902d84fe8dc3d90b0243ed152d70deb9528ef535",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\resources\\app.asar.unpacked\\node_modules\\@remotion\\compositor-win32-x64-msvc\\avdevice-60.dll",
+        "Size": 128512,
+        "SHA256": "bb17bd3d39856f6c8940e86bc7336ab09151f17cac4a52eb0c5679ea3c171d46",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\resources\\app.asar.unpacked\\node_modules\\@remotion\\compositor-win32-x64-msvc\\avdevice-61.dll",
+        "Size": 128512,
+        "SHA256": "c5ee6c9cc419abbad39c0260d3f323e4d5534c2ff44b18899f268d834403bf3b",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\resources\\app.asar.unpacked\\node_modules\\@remotion\\compositor-win32-x64-msvc\\avfilter-10.dll",
+        "Size": 1181184,
+        "SHA256": "04e7355aaa0452c6f8faae67c8a70d1d0418d63483409660605c3c33e05ef5e4",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\resources\\app.asar.unpacked\\node_modules\\@remotion\\compositor-win32-x64-msvc\\avfilter-9.dll",
+        "Size": 1159680,
+        "SHA256": "ddeb084f55d2f5c9d3d33d0b5b238d3d66ab83744a853daada3bd6b1d0f765ba",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\resources\\app.asar.unpacked\\node_modules\\@remotion\\compositor-win32-x64-msvc\\avformat-60.dll",
+        "Size": 908800,
+        "SHA256": "0694f8549b8d56125150dfacc70d0f27ab199a1179055b43b7c386a381106a52",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\resources\\app.asar.unpacked\\node_modules\\@remotion\\compositor-win32-x64-msvc\\avformat-61.dll",
+        "Size": 981504,
+        "SHA256": "3915696eac0eecbdb4fc3b299346e5be9b25a32afec4f319ab4b28e7dd3cd8d2",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\resources\\app.asar.unpacked\\node_modules\\@remotion\\compositor-win32-x64-msvc\\avutil-58.dll",
+        "Size": 683520,
+        "SHA256": "71d5c71fab96ab66f0826a310418e010f796dc1c88d5c48d233cad080c5f0c40",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\resources\\app.asar.unpacked\\node_modules\\@remotion\\compositor-win32-x64-msvc\\avutil-59.dll",
+        "Size": 729600,
+        "SHA256": "fd80aac7849a81bbfccaded5cbbf3028580c50494da3a43833019383e55adc66",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\resources\\app.asar.unpacked\\node_modules\\@remotion\\compositor-win32-x64-msvc\\ffmpeg.exe",
+        "Size": 323584,
+        "SHA256": "d60f4e7c6496dcc04333cb4b752597e782657892284f6302b47deadbd37f2639",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\resources\\app.asar.unpacked\\node_modules\\@remotion\\compositor-win32-x64-msvc\\ffprobe.exe",
+        "Size": 168960,
+        "SHA256": "28ac860611e8f42ccfe7a59eb4a2f9dbfb9a5eb15d14af284401d1083be426e6",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\resources\\app.asar.unpacked\\node_modules\\@remotion\\compositor-win32-x64-msvc\\libgcc_s_seh-1.dll",
+        "Size": 83150,
+        "SHA256": "e298fa2e8729b17208ccd20b585b01ef58d10fb050eb03c72fdb04ea5462e766",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\resources\\app.asar.unpacked\\node_modules\\@remotion\\compositor-win32-x64-msvc\\libssp-0.dll",
+        "Size": 43431,
+        "SHA256": "647dbde6fe577e2d8710f96510556c2405a42a4f10fc30e4e10521ce036584b4",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\resources\\app.asar.unpacked\\node_modules\\@remotion\\compositor-win32-x64-msvc\\libstdc++-6.dll",
+        "Size": 1444997,
+        "SHA256": "821e40488ee797e29d173e42d5bec669203fd9676a687acf3d0a21a7a1446b28",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\resources\\app.asar.unpacked\\node_modules\\@remotion\\compositor-win32-x64-msvc\\libvpx-1.dll",
+        "Size": 3419339,
+        "SHA256": "6656164716a3deeba19d18b47f31acb16ccc628d225aa06e8bd29da80fa6d83f",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\resources\\app.asar.unpacked\\node_modules\\@remotion\\compositor-win32-x64-msvc\\libwinpthread-1.dll",
+        "Size": 58621,
+        "SHA256": "707e0add151c8d7e150a3fe0ba8c0c562505c3859f687b82de8a1af6c2b3bb73",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\resources\\app.asar.unpacked\\node_modules\\@remotion\\compositor-win32-x64-msvc\\msvcr100.dll",
+        "Size": 830616,
+        "SHA256": "2b7ab898b2f64f4cd1ae651c93d7eb9556208fd8d8d40d425e856c83d86d2346",
+        "Status": "Valid",
+        "Signer": "CN=Microsoft Corporation, OU=MOPR, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+        "SignerThumbprint": "98ED99A67886D020C564923B7DF25E9AC019DF26",
+        "PublicKeyAlgorithm": "1.2.840.113549.1.1.1",
+        "TimestampPresent": true
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\resources\\app.asar.unpacked\\node_modules\\@remotion\\compositor-win32-x64-msvc\\remotion.exe",
+        "Size": 1291509,
+        "SHA256": "9cc7579c3a7c9f09b61421ebe1fac4109ee4ca443e536b3122279b9897b669d9",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\resources\\app.asar.unpacked\\node_modules\\@remotion\\compositor-win32-x64-msvc\\swresample-4.dll",
+        "Size": 112640,
+        "SHA256": "31f08bd1b0996ec52a96b9dac6786289559f6b29902cc2ec455fdb7bd35f4ec0",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\resources\\app.asar.unpacked\\node_modules\\@remotion\\compositor-win32-x64-msvc\\swresample-5.dll",
+        "Size": 110080,
+        "SHA256": "b29c4a79d99eeb568557c071764c7b603984601c9141fc160dccdebb4e977dc5",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\resources\\app.asar.unpacked\\node_modules\\@remotion\\compositor-win32-x64-msvc\\swscale-7.dll",
+        "Size": 525824,
+        "SHA256": "1f96a24e81da9fe32d35d3db9780fcdd4048d5c62b0cb2795cf7c95975f40326",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\resources\\app.asar.unpacked\\node_modules\\@remotion\\compositor-win32-x64-msvc\\swscale-8.dll",
+        "Size": 564736,
+        "SHA256": "4532cede2e75f39710386f2c0ac330dfe81aabb38fe254cc3ab4d3acc311b1b4",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\resources\\app.asar.unpacked\\node_modules\\@remotion\\compositor-win32-x64-msvc\\zlib1.dll",
+        "Size": 88888,
+        "SHA256": "0ab6e9f64123d6a9d80ec6a5f590effe9f1858f84dab92e9c02c2c72c8cfd131",
+        "Status": "Valid",
+        "Signer": "CN=Apple Inc., O=Apple Inc., L=Cupertino, S=California, C=US",
+        "SignerThumbprint": "2122EF45A9AC0BDFB809E868873F17CB321BC23D",
+        "PublicKeyAlgorithm": "1.2.840.113549.1.1.1",
+        "TimestampPresent": true
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\resources\\remotion-browser\\chrome-headless-shell.exe",
+        "Size": 177228288,
+        "SHA256": "fffdc5e77fae67391e154d92f2084f84fec410632a48211ae0ab652dc64aeacf",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\resources\\remotion-browser\\libEGL.dll",
+        "Size": 495104,
+        "SHA256": "95f42e8dc0a12df9855217aeb26c5f1f0c1c5b5a58c1fad22187eb23d7fd72d0",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\resources\\remotion-browser\\libGLESv2.dll",
+        "Size": 7882240,
+        "SHA256": "d101aa2b44804c3b2dd2cc155e07396ee4e3d0d317460d41844f6ca89f2a266e",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\resources\\remotion-browser\\vk_swiftshader.dll",
+        "Size": 5389312,
+        "SHA256": "74c3a2bb48b7d980b4b5f5b8c8753a94aaa086643897638fe007335748d2e4d2",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\win-unpacked\\resources\\remotion-browser\\vulkan-1.dll",
+        "Size": 886784,
+        "SHA256": "a20be5e83ee19b8238fa9d300ce018f0018d1217648147b977b663966765f35f",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      },
+      {
+        "Path": "${LOCAL_PATH}\\outputs\\design-studio\\release\\Design Studio Setup 0.1.0.exe",
+        "Size": 225174573,
+        "SHA256": "49dfc0032f6359354fce1fbab6bd8830604cf259c32daf4b122c2c8e16c42bfd",
+        "Status": "NotSigned",
+        "Signer": null,
+        "SignerThumbprint": null,
+        "PublicKeyAlgorithm": null,
+        "TimestampPresent": false
+      }
+    ]
+  },
+  "policyChanged": false,
+  "finalExeExecuted": false,
+  "signingPreparation": {
+    "checkedAt": "2026-10-02T11:56:46.285Z",
+    "passedTests": 16,
+    "failedTests": 0,
+    "typeCheck": "passed",
+    "actualSigningPerformed": false,
+    "finalExeExecuted": false,
+    "prerequisite": "Publicly trusted RSA signing credential not configured",
+    "guide": "../design-studio/scripts/SIGNING.md"
+  }
+}

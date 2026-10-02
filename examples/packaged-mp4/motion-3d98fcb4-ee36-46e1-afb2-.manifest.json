@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "kind": "motion",
+  "format": "mp4",
+  "projectId": "3d98fcb4-ee36-46e1-afb2-0d5a8d91aeb0",
+  "revision": 2,
+  "width": 640,
+  "height": 360,
+  "fps": 30,
+  "durationFrames": 30,
+  "durationSeconds": 1,
+  "seed": 42,
+  "transparent": false,
+  "renderer": "Remotion 4.0.363",
+  "browser": "chrome-headless-shell.exe",
+  "font": "Pretendard",
+  "fontNote": "앱에 포함된 Pretendard Variable 웹폰트를 사용합니다.",
+  "audio": {
+    "trimStartFrames": 0,
+    "fadeInFrames": 0,
+    "fadeOutFrames": 0
+  },
+  "design": {
+    "styleId": "glass",
+    "mode": "dark",
+    "tokens": {
+      "font.family": "Pretendard",
+      "font.title": 78,
+      "font.body": 36,
+      "font.lineHeight": 1.55,
+      "font.tracking": 0,
+      "radius.card": 20,
+      "space.base": 24,
+      "effect.blur": 20,
+      "effect.glow": 0.45,
+      "effect.decor": 1,
+      "motion.duration": 500,
+      "color.success": "#51c9a5",
+      "color.danger": "#ff758c",
+      "color.onAccent": "#10131a",
+      "color.bg": "#0e1220",
+      "color.surface": "#1a2033",
+      "color.text": "#f1f4ff",
+      "color.muted": "#a9b1cb",
+      "color.border": "#35405b",
+      "color.accent": "#adbcff"
+    }
+  },
+  "assets": [],
+  "createdAt": "2026-10-02T10:41:44.900Z"
+}

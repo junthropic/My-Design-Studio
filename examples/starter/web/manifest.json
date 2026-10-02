@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "format": "web",
+  "projectId": "57f1489b-b89d-446a-82da-6d368ccc1491",
+  "projectRevision": 0,
+  "exportedAt": "2026-10-02T10:55:05.436Z",
+  "capabilities": [
+    {
+      "location": "web",
+      "feature": "반응형 페이지·검색·정렬·상세·FAQ",
+      "capability": "native",
+      "message": "미리보기와 같은 HTML 렌더러 및 인터랙션을 사용합니다."
+    },
+    {
+      "location": "datasets",
+      "feature": "데이터",
+      "capability": "native",
+      "message": "내보내는 시점의 데이터 스냅샷을 포함합니다."
+    }
+  ],
+  "font": {
+    "requested": "Pretendard",
+    "embedded": true,
+    "bundled": [
+      "PretendardVariable.woff2"
+    ],
+    "license": "fonts/OFL.txt",
+    "uploaded": [],
+    "note": "Pretendard 웹폰트와 OFL 라이선스를 포함합니다. 업로드한 글꼴은 원본 자산과 함께 포함되며 별도 사용권 조건을 확인해야 합니다. 그 밖의 시스템 글꼴은 포함하지 않습니다."
+  },
+  "pages": [
+    "index.html",
+    "page-8c74833f-52c2-49e9-824a-886425cf128d.html",
+    "page-a616dd97-103b-472f-bbb7-0d7fa584f454.html"
+  ],
+  "assets": [],
+  "credentialsIncluded": false
+}

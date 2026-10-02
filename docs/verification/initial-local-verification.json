@@ -1,0 +1,323 @@
+{
+  "build": {
+    "releaseMode": "local",
+    "build": "PASS",
+    "integrity": "PASS",
+    "codeSigningRequired": false,
+    "productionCredentialRequired": false,
+    "installerRequired": false,
+    "signingProviderCalled": false,
+    "buildDirectory": "${LOCAL_PATH}\\outputs\\local\\builds\\2026-10-02T13-39-23-920Z-HKNxIK",
+    "steps": [
+      {
+        "name": "typecheck",
+        "exitCode": 0
+      },
+      {
+        "name": "tests",
+        "exitCode": 0
+      },
+      {
+        "name": "ui",
+        "exitCode": 0
+      },
+      {
+        "name": "motion",
+        "exitCode": 0
+      },
+      {
+        "name": "server",
+        "exitCode": 0
+      },
+      {
+        "name": "electron",
+        "exitCode": 0
+      },
+      {
+        "name": "ui-acceptance",
+        "exitCode": 0
+      },
+      {
+        "name": "package",
+        "exitCode": 0
+      }
+    ],
+    "tests": {
+      "existingTests": 122,
+      "status": "PASS",
+      "totalPassed": 255,
+      "skipped": 4
+    },
+    "appDirectory": "${LOCAL_PATH}\\outputs\\local\\builds\\2026-10-02T13-39-23-920Z-HKNxIK\\win-unpacked",
+    "productionPreserved": {
+      "passed": true,
+      "files": 29,
+      "productionPipelineChanged": false
+    }
+  },
+  "verification": {
+    "releaseMode": "local",
+    "build": "PASS",
+    "integrity": "PASS",
+    "codeSigningRequired": false,
+    "productionCredentialRequired": false,
+    "unsignedFirstPartyAllowed": true,
+    "applicationLaunch": "PASS",
+    "exportVerification": "PASS",
+    "restartVerification": "PASS",
+    "launchAttempted": true,
+    "policyChanged": false,
+    "productionPipelineChanged": false,
+    "productionPreserved": {
+      "passed": true,
+      "files": 29,
+      "productionPipelineChanged": false
+    },
+    "smartAppControl": {
+      "state": "OFF",
+      "rawValue": 0,
+      "detail": null,
+      "readOnly": true,
+      "policyChanged": false
+    },
+    "beforeSHA256": "e86404405d6a7ba955054e206a5063010c0884468c6febba7738f9c94e945487",
+    "results": [
+      {
+        "check": "ui-ready",
+        "url": "http://127.0.0.1:54931",
+        "title": "Design Studio · 나만의 디자인 작업실",
+        "nodeVersion": "22.21.1",
+        "electronVersion": "37.10.3",
+        "navigationReady": true
+      },
+      {
+        "check": "project-create-save-load",
+        "revision": 2
+      },
+      {
+        "check": "export",
+        "format": "pptx",
+        "status": "PASS",
+        "files": [
+          {
+            "name": "LOCAL-동일-EXE-기능-검증.pptx",
+            "path": "${LOCAL_PATH}\\outputs\\local\\builds\\2026-10-02T13-39-23-920Z-HKNxIK\\work\\verification-1790948441203\\data\\exports\\8d4a689f-d760-4fb1-bee5-5b0c0840b9e1\\pptx-1790948464109-c5e42a94\\LOCAL-동일-EXE-기능-검증.pptx",
+            "bytes": 200904,
+            "sha256": "aca9a88a86cbaac5448d6384c931df8ac59a7cce32840acda3a903279b0b2c2c"
+          },
+          {
+            "name": "README.txt",
+            "path": "${LOCAL_PATH}\\outputs\\local\\builds\\2026-10-02T13-39-23-920Z-HKNxIK\\work\\verification-1790948441203\\data\\exports\\8d4a689f-d760-4fb1-bee5-5b0c0840b9e1\\pptx-1790948464109-c5e42a94\\README.txt",
+            "bytes": 176,
+            "sha256": "469b5471aeae2a40ebe276926df20b8c565ae568caea049709f3178a5f63ef05"
+          },
+          {
+            "name": "manifest.json",
+            "path": "${LOCAL_PATH}\\outputs\\local\\builds\\2026-10-02T13-39-23-920Z-HKNxIK\\work\\verification-1790948441203\\data\\exports\\8d4a689f-d760-4fb1-bee5-5b0c0840b9e1\\pptx-1790948464109-c5e42a94\\manifest.json",
+            "bytes": 23616,
+            "sha256": "699b6251ffaab98b12952e18b5ddb9f159e80d30c8ef60d0cfdfad525fe289d1"
+          }
+        ]
+      },
+      {
+        "check": "export",
+        "format": "web",
+        "status": "PASS",
+        "files": [
+          {
+            "name": "LOCAL-동일-EXE-기능-검증-web.zip",
+            "path": "${LOCAL_PATH}\\outputs\\local\\builds\\2026-10-02T13-39-23-920Z-HKNxIK\\work\\verification-1790948441203\\data\\exports\\0a6a160f-72b3-40a1-a0ca-0cbf74324085\\web-1790948464607-d3ce145f\\LOCAL-동일-EXE-기능-검증-web.zip",
+            "bytes": 4124340,
+            "sha256": "c0ad20606a47907e5ae70110e79171e0223bda0fa93f24c3d653dc4bb537b713"
+          },
+          {
+            "name": "manifest.json",
+            "path": "${LOCAL_PATH}\\outputs\\local\\builds\\2026-10-02T13-39-23-920Z-HKNxIK\\work\\verification-1790948441203\\data\\exports\\0a6a160f-72b3-40a1-a0ca-0cbf74324085\\web-1790948464607-d3ce145f\\manifest.json",
+            "bytes": 1220,
+            "sha256": "303337b26de35cf95138d7f1df5eb9e42b8ccef68b6e49afb8f39b2136e274af"
+          }
+        ]
+      },
+      {
+        "check": "export",
+        "format": "tokens",
+        "status": "PASS",
+        "files": [
+          {
+            "name": "LOCAL-동일-EXE-기능-검증-tokens.zip",
+            "path": "${LOCAL_PATH}\\outputs\\local\\builds\\2026-10-02T13-39-23-920Z-HKNxIK\\work\\verification-1790948441203\\data\\exports\\834a79fb-0f65-4717-bc8d-39279a432426\\tokens-1790948465153-cd3761b8\\LOCAL-동일-EXE-기능-검증-tokens.zip",
+            "bytes": 3762,
+            "sha256": "b133fd8a9d7fe3a88746ce52a4f31aa01733e52ceb2762244b400773ab4a53d3"
+          },
+          {
+            "name": "tokens.dtcg.json",
+            "path": "${LOCAL_PATH}\\outputs\\local\\builds\\2026-10-02T13-39-23-920Z-HKNxIK\\work\\verification-1790948441203\\data\\exports\\834a79fb-0f65-4717-bc8d-39279a432426\\tokens-1790948465153-cd3761b8\\tokens.dtcg.json",
+            "bytes": 7691,
+            "sha256": "c1f6cd934605860443801006d7c1b44dd442e25c617e5df3315e732168014216"
+          },
+          {
+            "name": "tokens.json",
+            "path": "${LOCAL_PATH}\\outputs\\local\\builds\\2026-10-02T13-39-23-920Z-HKNxIK\\work\\verification-1790948441203\\data\\exports\\834a79fb-0f65-4717-bc8d-39279a432426\\tokens-1790948465153-cd3761b8\\tokens.json",
+            "bytes": 3592,
+            "sha256": "6caf18ca202cf47a1d17473ba97063f15f4196c7775f96c72b5184c3f94bd8d7"
+          },
+          {
+            "name": "tokens.css",
+            "path": "${LOCAL_PATH}\\outputs\\local\\builds\\2026-10-02T13-39-23-920Z-HKNxIK\\work\\verification-1790948441203\\data\\exports\\834a79fb-0f65-4717-bc8d-39279a432426\\tokens-1790948465153-cd3761b8\\tokens.css",
+            "bytes": 1055,
+            "sha256": "4d539519e85d14bac51861d10d5d41ca75ca1bf55bb1936d7b802c8c27ab45ed"
+          },
+          {
+            "name": "DESIGN.md",
+            "path": "${LOCAL_PATH}\\outputs\\local\\builds\\2026-10-02T13-39-23-920Z-HKNxIK\\work\\verification-1790948441203\\data\\exports\\834a79fb-0f65-4717-bc8d-39279a432426\\tokens-1790948465153-cd3761b8\\DESIGN.md",
+            "bytes": 1370,
+            "sha256": "59c55c35652afddb6573711912d29e2b74c48387dd697c9a893f4379e25b4cb7"
+          },
+          {
+            "name": "manifest.json",
+            "path": "${LOCAL_PATH}\\outputs\\local\\builds\\2026-10-02T13-39-23-920Z-HKNxIK\\work\\verification-1790948441203\\data\\exports\\834a79fb-0f65-4717-bc8d-39279a432426\\tokens-1790948465153-cd3761b8\\manifest.json",
+            "bytes": 750,
+            "sha256": "9d2656a783c78857f05cde4711ad99fe55122eaa744162a6ba1c24abdf5dc759"
+          }
+        ]
+      },
+      {
+        "check": "export",
+        "format": "project",
+        "status": "PASS",
+        "files": [
+          {
+            "name": "LOCAL-동일-EXE-기능-검증.designstudio",
+            "path": "${LOCAL_PATH}\\outputs\\local\\builds\\2026-10-02T13-39-23-920Z-HKNxIK\\work\\verification-1790948441203\\data\\exports\\52675536-1568-47e1-be0f-b1eefd85c361\\project-1790948465605-22e71d4c\\LOCAL-동일-EXE-기능-검증.designstudio",
+            "bytes": 7929,
+            "sha256": "143cc12efb086012bf18fbc13b3337d1a9fb99b25f4094adfa255778add8464d"
+          },
+          {
+            "name": "manifest.json",
+            "path": "${LOCAL_PATH}\\outputs\\local\\builds\\2026-10-02T13-39-23-920Z-HKNxIK\\work\\verification-1790948441203\\data\\exports\\52675536-1568-47e1-be0f-b1eefd85c361\\project-1790948465605-22e71d4c\\manifest.json",
+            "bytes": 885,
+            "sha256": "12cff4323a1d10be28457340bf732a4eb22fb3b156da866404e58f5b032c0352"
+          }
+        ]
+      },
+      {
+        "check": "export",
+        "format": "after-effects",
+        "status": "PASS",
+        "files": [
+          {
+            "name": "LOCAL-동일-EXE-기능-검증-after-effects.zip",
+            "path": "${LOCAL_PATH}\\outputs\\local\\builds\\2026-10-02T13-39-23-920Z-HKNxIK\\work\\verification-1790948441203\\data\\exports\\52d14d94-42fa-4594-9b85-a9a562ba7ba9\\after-effects-1790948466077-43423929\\LOCAL-동일-EXE-기능-검증-after-effects.zip",
+            "bytes": 5440,
+            "sha256": "a558bbda828c0026c646b5bed85e998f8ba5700136b6d55052292695e47ae5e8"
+          },
+          {
+            "name": "manifest.json",
+            "path": "${LOCAL_PATH}\\outputs\\local\\builds\\2026-10-02T13-39-23-920Z-HKNxIK\\work\\verification-1790948441203\\data\\exports\\52d14d94-42fa-4594-9b85-a9a562ba7ba9\\after-effects-1790948466077-43423929\\manifest.json",
+            "bytes": 2384,
+            "sha256": "b2cdc3747d420c89e43219bfcbafb09337406b4364a094d0041f6979f729335e"
+          }
+        ]
+      },
+      {
+        "check": "export",
+        "format": "blender",
+        "status": "PASS",
+        "files": [
+          {
+            "name": "LOCAL-동일-EXE-기능-검증-blender.zip",
+            "path": "${LOCAL_PATH}\\outputs\\local\\builds\\2026-10-02T13-39-23-920Z-HKNxIK\\work\\verification-1790948441203\\data\\exports\\a3442449-5ba7-49ee-9587-c5c14c51597e\\blender-1790948467102-7bd568ef\\LOCAL-동일-EXE-기능-검증-blender.zip",
+            "bytes": 5406,
+            "sha256": "6befced5365dcb114c9ffadcc6912a674113240609a1a926d283e8369932555f"
+          },
+          {
+            "name": "manifest.json",
+            "path": "${LOCAL_PATH}\\outputs\\local\\builds\\2026-10-02T13-39-23-920Z-HKNxIK\\work\\verification-1790948441203\\data\\exports\\a3442449-5ba7-49ee-9587-c5c14c51597e\\blender-1790948467102-7bd568ef\\manifest.json",
+            "bytes": 2631,
+            "sha256": "38bd8c018867b40056bfee7812067efc39c4cee84063eb7e0411b4abdcf336f9"
+          }
+        ]
+      },
+      {
+        "check": "export",
+        "format": "mp4",
+        "status": "PASS",
+        "files": [
+          {
+            "name": "motion-ac6cb549-7a06-4bc1-847e-.mp4",
+            "path": "${LOCAL_PATH}\\outputs\\local\\builds\\2026-10-02T13-39-23-920Z-HKNxIK\\work\\verification-1790948441203\\data\\exports\\a811294a-74a5-4a76-ae51-f8338368cc1e\\motion-ac6cb549-7a06-4bc1-847e-.mp4",
+            "bytes": 5708,
+            "sha256": "65547709d5fb375db5200b61ffcc21171e073e6f28d60a3e8a5404b7246e2923"
+          },
+          {
+            "name": "motion-ac6cb549-7a06-4bc1-847e-.manifest.json",
+            "path": "${LOCAL_PATH}\\outputs\\local\\builds\\2026-10-02T13-39-23-920Z-HKNxIK\\work\\verification-1790948441203\\data\\exports\\a811294a-74a5-4a76-ae51-f8338368cc1e\\motion-ac6cb549-7a06-4bc1-847e-.manifest.json",
+            "bytes": 1273,
+            "sha256": "9b420f3bc7909b7ca80a2b64a0445d79ad6e196450141dbe157b9901bf6f8104"
+          }
+        ]
+      },
+      {
+        "check": "export",
+        "format": "webm",
+        "status": "PASS",
+        "files": [
+          {
+            "name": "motion-ac6cb549-7a06-4bc1-847e-.webm",
+            "path": "${LOCAL_PATH}\\outputs\\local\\builds\\2026-10-02T13-39-23-920Z-HKNxIK\\work\\verification-1790948441203\\data\\exports\\0dd2503e-3a74-4ac5-993e-b92dc5f348ba\\motion-ac6cb549-7a06-4bc1-847e-.webm",
+            "bytes": 21001,
+            "sha256": "13ea1350d25dc3f4a984cb37b1fcfd5ad11ae7eddf0ef269bb17fbdaa29576cb"
+          },
+          {
+            "name": "motion-ac6cb549-7a06-4bc1-847e-.manifest.json",
+            "path": "${LOCAL_PATH}\\outputs\\local\\builds\\2026-10-02T13-39-23-920Z-HKNxIK\\work\\verification-1790948441203\\data\\exports\\0dd2503e-3a74-4ac5-993e-b92dc5f348ba\\motion-ac6cb549-7a06-4bc1-847e-.manifest.json",
+            "bytes": 1274,
+            "sha256": "d7c92c1b5fb34c1929bbb6d5f29532e73272c15800707969295c6bf815d003fc"
+          }
+        ]
+      },
+      {
+        "check": "export",
+        "format": "png-sequence",
+        "status": "PASS",
+        "files": [
+          {
+            "name": "motion-ac6cb549-7a06-4bc1-847e--frames.zip",
+            "path": "${LOCAL_PATH}\\outputs\\local\\builds\\2026-10-02T13-39-23-920Z-HKNxIK\\work\\verification-1790948441203\\data\\exports\\0f9b8fef-da0c-4e49-9d1d-a6d216cacefd\\motion-ac6cb549-7a06-4bc1-847e--frames.zip",
+            "bytes": 137861,
+            "sha256": "b14d2d89bb45a5906fdd15889854ee405c5ca955a513c4d192ef02eb20efe544"
+          },
+          {
+            "name": "motion-ac6cb549-7a06-4bc1-847e-.manifest.json",
+            "path": "${LOCAL_PATH}\\outputs\\local\\builds\\2026-10-02T13-39-23-920Z-HKNxIK\\work\\verification-1790948441203\\data\\exports\\0f9b8fef-da0c-4e49-9d1d-a6d216cacefd\\motion-ac6cb549-7a06-4bc1-847e-.manifest.json",
+            "bytes": 1282,
+            "sha256": "fe46aa133301e7c5b329e24b6090dd0fe4bd83126edfd375f9c64f16cc483028"
+          }
+        ]
+      },
+      {
+        "check": "normal-shutdown",
+        "exitCode": 0
+      },
+      {
+        "check": "restart-project-and-history",
+        "revision": 2,
+        "completedJobs": 9
+      }
+    ],
+    "afterSHA256": "e86404405d6a7ba955054e206a5063010c0884468c6febba7738f9c94e945487",
+    "finishedAt": "2026-10-02T13:41:37.973Z"
+  },
+  "productionPreserved": {
+    "passed": true,
+    "files": 29,
+    "productionPipelineChanged": false
+  },
+  "inventory": {
+    "files": 2141,
+    "native": 42,
+    "validVendor": 4,
+    "unsigned": 38
+  },
+  "sourceArchiveSHA256": "e905df279543950de79fe1d9e42a1f501b40d36bbed46ac91f912cc9dd4138b5"
+}

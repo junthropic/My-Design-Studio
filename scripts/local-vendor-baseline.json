@@ -1,0 +1,18 @@
+{
+  "d3dcompiler_47.dll": {
+    "status": "Valid",
+    "sha256": "289767b49dc8525bce262ea06fee4ef9fced2e131a55b25654ce871c1f0498b2"
+  },
+  "dxil.dll": {
+    "status": "Valid",
+    "sha256": "473f5e853120a5b6ca583ac51f453664abae15c0db1d307f29c8bf7a7b89f96c"
+  },
+  "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/msvcr100.dll": {
+    "status": "Valid",
+    "sha256": "2b7ab898b2f64f4cd1ae651c93d7eb9556208fd8d8d40d425e856c83d86d2346"
+  },
+  "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/zlib1.dll": {
+    "status": "Valid",
+    "sha256": "0ab6e9f64123d6a9d80ec6a5f590effe9f1858f84dab92e9c02c2c72c8cfd131"
+  }
+}

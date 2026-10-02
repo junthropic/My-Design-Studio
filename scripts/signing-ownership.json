@@ -1,0 +1,537 @@
+{
+  "schemaVersion": 1,
+  "notes": [
+    "Exact app-relative paths only. Unknown paths must fail closed. This inventory is provenance metadata, not a grant of rights or a completed redistribution/license audit.",
+    "First-party class identifies the application distribution responsibility; upstream Electron/Chromium code is not claimed as original application code.",
+    "Existing valid vendor signatures must be preserved byte-for-byte. The four presently valid vendor files set signUnsigned=false so a missing/invalid replacement cannot silently be signed as ours.",
+    "The installed Remotion compositor does not include a license file/field; dependent FFmpeg/runtime license obligations remain a documented evidence gap before external redistribution."
+  ],
+  "rules": [
+    {
+      "path": "d3dcompiler_47.dll",
+      "ownership": "bundled-third-party",
+      "origin": "electron@37.10.3 Windows x64 distribution; upstream Electron/Chromium graphics, media, and runtime dependencies.",
+      "purpose": "Electron graphics/media runtime; preserve upstream copyrights and any valid vendor Authenticode signature.",
+      "licenseEvidence": [
+        "node_modules/electron/package.json (electron@37.10.3)",
+        "release/win-unpacked/LICENSE.electron.txt",
+        "release/win-unpacked/LICENSES.chromium.html"
+      ],
+      "signUnsigned": false
+    },
+    {
+      "path": "Design Studio.exe",
+      "ownership": "first-party",
+      "origin": "Design Studio 0.1.0 application distribution; Electron 37.10.3 executable shell with application metadata. This does not claim authorship of Electron or Chromium.",
+      "purpose": "Launch the local desktop application and its embedded Node/Chromium runtime.",
+      "licenseEvidence": [
+        "package.json (design-studio@0.1.0)",
+        "node_modules/electron/LICENSE",
+        "release/win-unpacked/LICENSE.electron.txt",
+        "release/win-unpacked/LICENSES.chromium.html"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "dxcompiler.dll",
+      "ownership": "bundled-third-party",
+      "origin": "electron@37.10.3 Windows x64 distribution; upstream Electron/Chromium graphics, media, and runtime dependencies.",
+      "purpose": "Electron graphics/media runtime; preserve upstream copyrights and any valid vendor Authenticode signature.",
+      "licenseEvidence": [
+        "node_modules/electron/package.json (electron@37.10.3)",
+        "release/win-unpacked/LICENSE.electron.txt",
+        "release/win-unpacked/LICENSES.chromium.html"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "dxil.dll",
+      "ownership": "bundled-third-party",
+      "origin": "electron@37.10.3 Windows x64 distribution; upstream Electron/Chromium graphics, media, and runtime dependencies.",
+      "purpose": "Electron graphics/media runtime; preserve upstream copyrights and any valid vendor Authenticode signature.",
+      "licenseEvidence": [
+        "node_modules/electron/package.json (electron@37.10.3)",
+        "release/win-unpacked/LICENSE.electron.txt",
+        "release/win-unpacked/LICENSES.chromium.html"
+      ],
+      "signUnsigned": false
+    },
+    {
+      "path": "ffmpeg.dll",
+      "ownership": "bundled-third-party",
+      "origin": "electron@37.10.3 Windows x64 distribution; upstream Electron/Chromium graphics, media, and runtime dependencies.",
+      "purpose": "Electron graphics/media runtime; preserve upstream copyrights and any valid vendor Authenticode signature.",
+      "licenseEvidence": [
+        "node_modules/electron/package.json (electron@37.10.3)",
+        "release/win-unpacked/LICENSE.electron.txt",
+        "release/win-unpacked/LICENSES.chromium.html"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "libEGL.dll",
+      "ownership": "bundled-third-party",
+      "origin": "electron@37.10.3 Windows x64 distribution; upstream Electron/Chromium graphics, media, and runtime dependencies.",
+      "purpose": "Electron graphics/media runtime; preserve upstream copyrights and any valid vendor Authenticode signature.",
+      "licenseEvidence": [
+        "node_modules/electron/package.json (electron@37.10.3)",
+        "release/win-unpacked/LICENSE.electron.txt",
+        "release/win-unpacked/LICENSES.chromium.html"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "libGLESv2.dll",
+      "ownership": "bundled-third-party",
+      "origin": "electron@37.10.3 Windows x64 distribution; upstream Electron/Chromium graphics, media, and runtime dependencies.",
+      "purpose": "Electron graphics/media runtime; preserve upstream copyrights and any valid vendor Authenticode signature.",
+      "licenseEvidence": [
+        "node_modules/electron/package.json (electron@37.10.3)",
+        "release/win-unpacked/LICENSE.electron.txt",
+        "release/win-unpacked/LICENSES.chromium.html"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@esbuild/win32-x64/esbuild.exe",
+      "ownership": "bundled-third-party",
+      "origin": "@esbuild/win32-x64@0.25.0, distributed with the runtime Remotion bundler dependency.",
+      "purpose": "Bundle authored motion compositions when the local renderer needs a composition build.",
+      "licenseEvidence": [
+        "node_modules/@esbuild/win32-x64/package.json (MIT)",
+        "node_modules/esbuild/LICENSE.md"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@img/sharp-win32-x64/lib/libvips-42.dll",
+      "ownership": "bundled-third-party",
+      "origin": "@img/sharp-win32-x64@0.34.5; sharp addon and bundled libvips shared libraries. These are upstream dependencies, not first-party code.",
+      "purpose": "Image metadata, conversion, and export rendering.",
+      "licenseEvidence": [
+        "node_modules/@img/sharp-win32-x64/package.json (Apache-2.0 AND LGPL-3.0-or-later)",
+        "node_modules/@img/sharp-win32-x64/LICENSE",
+        "node_modules/@img/sharp-win32-x64/versions.json"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@img/sharp-win32-x64/lib/libvips-cpp-8.17.3.dll",
+      "ownership": "bundled-third-party",
+      "origin": "@img/sharp-win32-x64@0.34.5; sharp addon and bundled libvips shared libraries. These are upstream dependencies, not first-party code.",
+      "purpose": "Image metadata, conversion, and export rendering.",
+      "licenseEvidence": [
+        "node_modules/@img/sharp-win32-x64/package.json (Apache-2.0 AND LGPL-3.0-or-later)",
+        "node_modules/@img/sharp-win32-x64/LICENSE",
+        "node_modules/@img/sharp-win32-x64/versions.json"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@img/sharp-win32-x64/lib/sharp-win32-x64.node",
+      "ownership": "bundled-third-party",
+      "origin": "@img/sharp-win32-x64@0.34.5; sharp addon and bundled libvips shared libraries. These are upstream dependencies, not first-party code.",
+      "purpose": "Image metadata, conversion, and export rendering.",
+      "licenseEvidence": [
+        "node_modules/@img/sharp-win32-x64/package.json (Apache-2.0 AND LGPL-3.0-or-later)",
+        "node_modules/@img/sharp-win32-x64/LICENSE",
+        "node_modules/@img/sharp-win32-x64/versions.json"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/avcodec-60.dll",
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled FFmpeg executable/shared library. No ownership of this dependency is claimed.",
+      "purpose": "Video/audio encoding, decoding, probing, resampling, or scaling for motion export.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/avcodec-61.dll",
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled FFmpeg executable/shared library. No ownership of this dependency is claimed.",
+      "purpose": "Video/audio encoding, decoding, probing, resampling, or scaling for motion export.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/avdevice-60.dll",
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled FFmpeg executable/shared library. No ownership of this dependency is claimed.",
+      "purpose": "Video/audio encoding, decoding, probing, resampling, or scaling for motion export.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/avdevice-61.dll",
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled FFmpeg executable/shared library. No ownership of this dependency is claimed.",
+      "purpose": "Video/audio encoding, decoding, probing, resampling, or scaling for motion export.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/avfilter-10.dll",
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled FFmpeg executable/shared library. No ownership of this dependency is claimed.",
+      "purpose": "Video/audio encoding, decoding, probing, resampling, or scaling for motion export.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/avfilter-9.dll",
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled FFmpeg executable/shared library. No ownership of this dependency is claimed.",
+      "purpose": "Video/audio encoding, decoding, probing, resampling, or scaling for motion export.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/avformat-60.dll",
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled FFmpeg executable/shared library. No ownership of this dependency is claimed.",
+      "purpose": "Video/audio encoding, decoding, probing, resampling, or scaling for motion export.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/avformat-61.dll",
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled FFmpeg executable/shared library. No ownership of this dependency is claimed.",
+      "purpose": "Video/audio encoding, decoding, probing, resampling, or scaling for motion export.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/avutil-58.dll",
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled FFmpeg executable/shared library. No ownership of this dependency is claimed.",
+      "purpose": "Video/audio encoding, decoding, probing, resampling, or scaling for motion export.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/avutil-59.dll",
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled FFmpeg executable/shared library. No ownership of this dependency is claimed.",
+      "purpose": "Video/audio encoding, decoding, probing, resampling, or scaling for motion export.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/ffmpeg.exe",
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled FFmpeg executable/shared library. No ownership of this dependency is claimed.",
+      "purpose": "Video/audio encoding, decoding, probing, resampling, or scaling for motion export.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/ffprobe.exe",
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled FFmpeg executable/shared library. No ownership of this dependency is claimed.",
+      "purpose": "Video/audio encoding, decoding, probing, resampling, or scaling for motion export.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/libgcc_s_seh-1.dll",
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled upstream runtime dependency libgcc_s_seh-1.dll. No ownership of this dependency is claimed.",
+      "purpose": "Native Remotion compositor and its required runtime libraries.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/libssp-0.dll",
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled upstream runtime dependency libssp-0.dll. No ownership of this dependency is claimed.",
+      "purpose": "Native Remotion compositor and its required runtime libraries.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/libstdc++-6.dll",
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled upstream runtime dependency libstdc++-6.dll. No ownership of this dependency is claimed.",
+      "purpose": "Native Remotion compositor and its required runtime libraries.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/libvpx-1.dll",
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled upstream runtime dependency libvpx-1.dll. No ownership of this dependency is claimed.",
+      "purpose": "Native Remotion compositor and its required runtime libraries.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/libwinpthread-1.dll",
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled upstream runtime dependency libwinpthread-1.dll. No ownership of this dependency is claimed.",
+      "purpose": "Native Remotion compositor and its required runtime libraries.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/msvcr100.dll",
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled upstream runtime dependency msvcr100.dll. No ownership of this dependency is claimed.",
+      "purpose": "Native Remotion compositor and its required runtime libraries.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "signUnsigned": false
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/remotion.exe",
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; upstream Remotion native compositor. No ownership of this dependency is claimed.",
+      "purpose": "Native Remotion compositor and its required runtime libraries.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/swresample-4.dll",
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled FFmpeg executable/shared library. No ownership of this dependency is claimed.",
+      "purpose": "Video/audio encoding, decoding, probing, resampling, or scaling for motion export.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/swresample-5.dll",
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled FFmpeg executable/shared library. No ownership of this dependency is claimed.",
+      "purpose": "Video/audio encoding, decoding, probing, resampling, or scaling for motion export.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/swscale-7.dll",
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled FFmpeg executable/shared library. No ownership of this dependency is claimed.",
+      "purpose": "Video/audio encoding, decoding, probing, resampling, or scaling for motion export.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/swscale-8.dll",
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled FFmpeg executable/shared library. No ownership of this dependency is claimed.",
+      "purpose": "Video/audio encoding, decoding, probing, resampling, or scaling for motion export.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "resources/app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc/zlib1.dll",
+      "ownership": "bundled-third-party",
+      "origin": "@remotion/compositor-win32-x64-msvc@4.0.363; bundled upstream runtime dependency zlib1.dll. No ownership of this dependency is claimed.",
+      "purpose": "Native Remotion compositor and its required runtime libraries.",
+      "licenseEvidence": [
+        "node_modules/@remotion/compositor-win32-x64-msvc/package.json (@4.0.363; no license field or license file found in this installed package)",
+        "node_modules/@remotion/renderer/package.json (SEE LICENSE IN LICENSE.md; referenced file absent in installed package)",
+        "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (upstream current license; not a per-binary license audit)"
+      ],
+      "signUnsigned": false
+    },
+    {
+      "path": "resources/elevate.exe",
+      "ownership": "bundled-third-party",
+      "origin": "electron-builder 26.15.3 NSIS 3.0.4.1 elevate helper copied by AppPackageHelper; upstream bundled helper.",
+      "purpose": "Support installer maintenance/elevation according to the selected NSIS installation mode.",
+      "licenseEvidence": [
+        "node_modules/app-builder-lib/package.json (MIT; @26.15.3)",
+        "../../work/builder-cache/nsis-3.0.4.1/nsis-3.0.4.1-1mx3n/COPYING"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "resources/remotion-browser/chrome-headless-shell.exe",
+      "ownership": "bundled-third-party",
+      "origin": "Remotion-provisioned Chromium headless shell from vendor/remotion-browser; upstream Chromium and graphics dependencies, not first-party code.",
+      "purpose": "Render authored motion compositions in the bundled local browser.",
+      "licenseEvidence": [
+        "vendor/remotion-browser/LICENSE.headless_shell",
+        "release/win-unpacked/resources/remotion-browser/LICENSE.headless_shell",
+        "node_modules/@remotion/renderer/package.json (@4.0.363)"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "resources/remotion-browser/libEGL.dll",
+      "ownership": "bundled-third-party",
+      "origin": "Remotion-provisioned Chromium headless shell from vendor/remotion-browser; upstream Chromium and graphics dependencies, not first-party code.",
+      "purpose": "Render authored motion compositions in the bundled local browser.",
+      "licenseEvidence": [
+        "vendor/remotion-browser/LICENSE.headless_shell",
+        "release/win-unpacked/resources/remotion-browser/LICENSE.headless_shell",
+        "node_modules/@remotion/renderer/package.json (@4.0.363)"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "resources/remotion-browser/libGLESv2.dll",
+      "ownership": "bundled-third-party",
+      "origin": "Remotion-provisioned Chromium headless shell from vendor/remotion-browser; upstream Chromium and graphics dependencies, not first-party code.",
+      "purpose": "Render authored motion compositions in the bundled local browser.",
+      "licenseEvidence": [
+        "vendor/remotion-browser/LICENSE.headless_shell",
+        "release/win-unpacked/resources/remotion-browser/LICENSE.headless_shell",
+        "node_modules/@remotion/renderer/package.json (@4.0.363)"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "resources/remotion-browser/vk_swiftshader.dll",
+      "ownership": "bundled-third-party",
+      "origin": "Remotion-provisioned Chromium headless shell from vendor/remotion-browser; upstream Chromium and graphics dependencies, not first-party code.",
+      "purpose": "Render authored motion compositions in the bundled local browser.",
+      "licenseEvidence": [
+        "vendor/remotion-browser/LICENSE.headless_shell",
+        "release/win-unpacked/resources/remotion-browser/LICENSE.headless_shell",
+        "node_modules/@remotion/renderer/package.json (@4.0.363)"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "resources/remotion-browser/vulkan-1.dll",
+      "ownership": "bundled-third-party",
+      "origin": "Remotion-provisioned Chromium headless shell from vendor/remotion-browser; upstream Chromium and graphics dependencies, not first-party code.",
+      "purpose": "Render authored motion compositions in the bundled local browser.",
+      "licenseEvidence": [
+        "vendor/remotion-browser/LICENSE.headless_shell",
+        "release/win-unpacked/resources/remotion-browser/LICENSE.headless_shell",
+        "node_modules/@remotion/renderer/package.json (@4.0.363)"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "vk_swiftshader.dll",
+      "ownership": "bundled-third-party",
+      "origin": "electron@37.10.3 Windows x64 distribution; upstream Electron/Chromium graphics, media, and runtime dependencies.",
+      "purpose": "Electron graphics/media runtime; preserve upstream copyrights and any valid vendor Authenticode signature.",
+      "licenseEvidence": [
+        "node_modules/electron/package.json (electron@37.10.3)",
+        "release/win-unpacked/LICENSE.electron.txt",
+        "release/win-unpacked/LICENSES.chromium.html"
+      ],
+      "signUnsigned": true
+    },
+    {
+      "path": "vulkan-1.dll",
+      "ownership": "bundled-third-party",
+      "origin": "electron@37.10.3 Windows x64 distribution; upstream Electron/Chromium graphics, media, and runtime dependencies.",
+      "purpose": "Electron graphics/media runtime; preserve upstream copyrights and any valid vendor Authenticode signature.",
+      "licenseEvidence": [
+        "node_modules/electron/package.json (electron@37.10.3)",
+        "release/win-unpacked/LICENSE.electron.txt",
+        "release/win-unpacked/LICENSES.chromium.html"
+      ],
+      "signUnsigned": true
+    }
+  ],
+  "installer": {
+    "ownership": "generated-installer",
+    "signUnsigned": true,
+    "origin": "electron-builder 26.15.3 NSIS default templates and NSIS 3.0.4.1; generated installer/uninstaller for Design Studio 0.1.0.",
+    "purpose": "Install or uninstall this application distribution. Strict filenames and sequence are derived from package version by the signing orchestrator.",
+    "licenseEvidence": [
+      "node_modules/app-builder-lib/package.json (MIT; @26.15.3)",
+      "node_modules/app-builder-lib/templates/nsis/installer.nsi",
+      "../../work/builder-cache/nsis-3.0.4.1/nsis-3.0.4.1-1mx3n/COPYING"
+    ]
+  }
+}

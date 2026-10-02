@@ -1,0 +1,112 @@
+{
+  "name": "design-studio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "개인용 디자인 스튜디오 — PowerPoint, Web, Motion",
+  "main": "dist-electron/main.cjs",
+  "scripts": {
+    "publish:local": "node scripts/publish-github-release.mjs",
+    "release": "node scripts/local-release.mjs",
+    "build:local": "node scripts/local-release.mjs --build",
+    "release:local": "node scripts/local-release.mjs",
+    "verify:local": "node scripts/verify-local-release.mjs",
+    "build:production": "node scripts/signing-config.mjs --package",
+    "verify:production": "node scripts/verify-windows-release.mjs",
+    "dev": "tsx server/index.ts",
+    "ui:dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build --configLoader runner && tsx src/motion/build.ts && tsup server/index.ts --format esm --platform node --out-dir dist-server --external electron --external @remotion/renderer --external @remotion/bundler && tsup electron/main.ts --format cjs --platform node --out-dir dist-electron --external electron",
+    "start": "node dist-server/index.js",
+    "desktop": "electron .",
+    "test": "vitest run --configLoader runner",
+    "package:dir": "npm run build && tsx src/motion/build.ts --browser && electron-builder --dir",
+    "package:win": "npm run build && tsx src/motion/build.ts --browser && electron-builder --win nsis",
+    "signing:check": "node scripts/signing-config.mjs --check",
+    "signing:manifest": "node scripts/signing-prepare.mjs",
+    "signing:prepare": "node scripts/signing-prepare.mjs --mock-and-check",
+    "signing:release": "node scripts/signing-release.mjs",
+    "package:win:signed": "node scripts/signing-config.mjs --package",
+    "verify:win": "node scripts/verify-windows-release.mjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.0",
+    "@remotion/bundler": "4.0.363",
+    "@remotion/player": "4.0.363",
+    "@remotion/renderer": "4.0.363",
+    "exceljs": "^4.4.0",
+    "express": "^5.1.0",
+    "jszip": "^3.10.1",
+    "lucide-react": "^0.468.0",
+    "multer": "^2.0.2",
+    "papaparse": "^5.5.3",
+    "pptxgenjs": "^4.0.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "remotion": "4.0.363",
+    "saxes": "^5.0.1",
+    "sharp": "^0.34.3",
+    "sql.js": "^1.13.0",
+    "zod": "^3.25.0",
+    "zustand": "^5.0.6"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.55.0",
+    "@types/express": "^5.0.0",
+    "@types/multer": "^2.0.0",
+    "@types/node": "^22.15.0",
+    "@types/papaparse": "^5.3.16",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@types/sql.js": "^1.4.9",
+    "@vitejs/plugin-react": "^4.5.0",
+    "electron": "^37.3.0",
+    "electron-builder": "^26.0.12",
+    "prettier": "3.6.2",
+    "tsup": "^8.5.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "vitest": "^3.2.0"
+  },
+  "build": {
+    "appId": "local.designstudio.app",
+    "productName": "Design Studio",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**",
+      "dist-server/**",
+      "dist-electron/**",
+      "src/motion/**",
+      "src/core/**",
+      "package.json",
+      "dist-remotion/**"
+    ],
+    "asarUnpack": [
+      "node_modules/@remotion/**",
+      "node_modules/sharp/**",
+      "node_modules/@img/**",
+      "node_modules/sql.js/**",
+      "dist-remotion/**"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "extraResources": [
+      {
+        "from": "vendor/remotion-browser",
+        "to": "remotion-browser"
+      }
+    ]
+  },
+  "author": "Personal Design Studio"
+}

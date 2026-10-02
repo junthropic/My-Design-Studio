@@ -1,0 +1,12 @@
+node_modules
+dist
+dist-server
+dist-electron
+dist-remotion
+vendor
+release
+release-signed
+data
+package-lock.json
+public/fonts
+work
