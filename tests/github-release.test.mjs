@@ -9,9 +9,23 @@ import {
   requireVerified,
   publicReport,
   assertTrackedPayload,
+  findDraftRelease,
 } from '../scripts/publish-github-release.mjs';
 import { sha256 } from '../scripts/local-common.mjs';
 const temporary = [];
+it('looks up a new draft by release ID before its Git tag exists', async () => {
+  const calls = [];
+  const draft = {id: 123, tag_name: 'v0.1.0-local.20261002.2', target_commitish: 'abc', draft: true, assets: []};
+  const request = async (args) => {
+    calls.push(args[1]);
+    if (args[1].endsWith('?per_page=100')) return JSON.stringify([draft]);
+    if (args[1].endsWith('/123')) return JSON.stringify(draft);
+    throw Error('Unexpected endpoint');
+  };
+  expect(await findDraftRelease(draft.tag_name, 'abc', request)).toEqual(draft);
+  expect(calls).toHaveLength(2);
+  await expect(findDraftRelease(draft.tag_name, 'wrong-commit', request)).rejects.toThrow('DRAFT_NOT_FOUND');
+});
 it('checks every byte inside the portable download, not just the original EXE', async () => {
   const root = await fs.mkdtemp(path.join(os.tmpdir(), 'publish-archive-'));
   temporary.push(root);

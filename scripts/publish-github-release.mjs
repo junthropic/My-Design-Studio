@@ -133,6 +133,13 @@ async function command(executable, args, { cwd = projectDir, ...options } = {}) 
 }
 const git = (args) => command('git.exe', ['-c', 'safe.directory=' + projectDir, ...args]);
 const gh = (args) => command('gh.exe', args);
+export async function findDraftRelease(tag, commit, request = gh) {
+  // A new draft has no published Git tag yet; lookup-by-tag can return 404.
+  const releases = JSON.parse(await request(['api', `repos/${repository}/releases?per_page=100`]));
+  const matches = releases.filter((r) => r.tag_name === tag && r.draft && r.target_commitish === commit);
+  if (matches.length !== 1) throw Error('PUBLISH_DRAFT_NOT_FOUND');
+  return JSON.parse(await request(['api', `repos/${repository}/releases/${matches[0].id}`]));
+}
 export async function assertTrackedPayload(manifest, appDirectory) {
   const files = await listLocalFiles(appDirectory);
   if (files.length !== manifest.entries.length) throw Error('PUBLISH_PAYLOAD_CHANGED');
@@ -247,7 +254,7 @@ export async function publishLocal(tag) {
     '--notes-file',
     notesFile,
   ]);
-  const remoteRelease = JSON.parse(await gh(['api', `repos/${repository}/releases/tags/${tag}`]));
+  const remoteRelease = await findDraftRelease(tag, commit);
   for (const name of assets) {
     const actual = remoteRelease.assets.find((a) => a.name === name),
       file = path.join(output, name),

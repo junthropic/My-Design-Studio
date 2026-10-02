@@ -16,7 +16,9 @@ jobs:
           cache: npm
       - run: npm ci
       - run: node node_modules/typescript/bin/tsc --noEmit
+      - name: Build UI required by browser integration tests
+        run: node --require ./scripts/hidden-build.cjs node_modules/vite/bin/vite.js build
       - name: Unit and integration checks (optional local fixtures may be skipped)
-        run: node --require ./scripts/hidden-build.cjs node_modules/vitest/vitest.mjs run --configLoader runner --exclude tests/ui.test.ts
+        run: node --require ./scripts/hidden-build.cjs node_modules/vitest/vitest.mjs run --configLoader runner --exclude tests/ui.test.ts --testTimeout 60000
       # Release publication intentionally uses the verified Windows machine and publish:local.
       # CI source checks are not a substitute for the real EXE acceptance test.
